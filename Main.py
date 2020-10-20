@@ -7,6 +7,8 @@ from discord.ext import commands
 from PIL import Image
 from io import BytesIO
 from discord import VoiceClient
+from random import seed
+from random import randint
 
 def get_prefix(client, message):
     with open("prefixes.json", "r") as f:
@@ -169,8 +171,9 @@ async def updateok(ctx):
 
 @client.command()
 async def randomszám(ctx, num1, num2):
-    outputnumber = random.randint(num1, num2) 
-    await ctx.send(f"{outputnumber}")
+    for _ in range(10):
+        value = randint(num1, num2)
+        await ctx.send(f"A számod az a :**{value}**")
 
 
 @client.command()
