@@ -1,6 +1,7 @@
 import discord
 import random
 import asyncio
+import os
 import json
 from discord.ext import commands
 from PIL import Image
@@ -280,4 +281,4 @@ async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
     await ctx.send(f"{member} Ki lett bannolva a következő ok miatt: ```{indok}```")
 
 
-client.run("NzUzNjQ1Njk0Nzk5MTgzOTYz.X1pNPw.7dhSNA9-rwnH9JIGfwHvtWNC-BE")
+client.run(os.environ['token'])
