@@ -172,7 +172,7 @@ async def updateok(ctx):
 @client.command()
 async def randomszám(ctx, num1: int, num2: int):
         value = randint(num1, num2)
-        await ctx.send(f"A számod az a :**{value}**")
+        await ctx.send(f"A számod az a:**{value}**")
 
 
 @client.command()
