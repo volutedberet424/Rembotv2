@@ -165,7 +165,12 @@ async def kézfogás(ctx, user: discord.Member = None):
 
 @client.command()
 async def updateok(ctx):
-    await ctx.send("Itt lesz minden update amit a bot kap!!!")
+    await ctx.send("-v0.1 A bot 24/7 fut")
+
+@client.command()
+async def uptime(ctx):
+    await ctx.send("A bot 24/7 fut kivéve akkor amikor egy update jön ki, vagy pedig ha egy bug kerül fixálásra!")
+
 
 @client.command()
 async def votegay(ctx, member: discord.Member):
@@ -249,7 +254,7 @@ async def ping(ctx):
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok", value = "ping", inline = True)
-    embed.add_field(name = "Alap parancsok", value = "info, parancsok, invite, updateok", inline = True)
+    embed.add_field(name = "Alap parancsok", value = "info, parancsok, invite, updateok, uptime", inline = True)
     embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
