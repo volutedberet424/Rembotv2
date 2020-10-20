@@ -170,8 +170,7 @@ async def updateok(ctx):
     await ctx.send("-v0.1 A bot 24/7 fut")
 
 @client.command()
-async def randomszám(ctx, num1, num2):
-    for _ in range(10):
+async def randomszám(ctx, num1: int, num2: int):
         value = randint(num1, num2)
         await ctx.send(f"A számod az a :**{value}**")
 
