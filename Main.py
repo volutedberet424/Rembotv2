@@ -56,6 +56,8 @@ async def info(ctx):
     iembed.add_field(name = "Készitő:", value = "Volutedberet", inline = True)
     iembed.add_field(name = "Nyelv:", value = "python", inline = True)
     iembed.add_field(name = "Fontosabb infók:", value = "prefix: r!, parancslista: r!parancsok", inline = True)
+    iembed.add_field(name = "support szerver", value = "[invite](https://discord.gg/A5JxkD)", inline = True)
+    iembed.add_field(name = "Source code:", value = "[Github repo](https://github.com/volutedberet424/Rembotv2)", inline = True)
     iembed.set_thumbnail(url = "https://vignette.wikia.nocookie.net/rezero/images/0/02/Rem_Anime.png/revision/latest/window-crop/width/200/x-offset/281/y-offset/0/window-width/721/window-height/720?cb=20160730213532")
     iembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=iembed)
