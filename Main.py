@@ -169,7 +169,7 @@ async def updateok(ctx):
 
 @client.command()
 async def randomszám(ctx, num1, num2):
-    outputnumber = random.randint(min(num1), max(num2)) 
+    outputnumber = random.sample(range(num1, num2), 1) 
     await ctx.send(f"{outputnumber}")
 
 
