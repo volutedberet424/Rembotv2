@@ -263,7 +263,7 @@ async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok", value = "ping", inline = True)
     embed.add_field(name = "Alap parancsok", value = "info, parancsok, invite, updateok, uptime, randomszám", inline = True)
-    embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, userinfo", inline = True)
+    embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
     embed.add_field(name = "Animével kapcsolatos parancsok", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
@@ -293,5 +293,11 @@ async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
     await member.ban(reason=indok)
     await ctx.send(f"{member} Ki lett bannolva a következő ok miatt: ```{indok}```")
 
+
+@client.command()
+@commands.has_permissions(manage_messages = True)
+async def slowmode(ctx, seconds: int):
+    await ctx.channel.edit(slowmode_delay=seconds)
+    await ctx.send(f"Erre a csatornára slowmode lett rakva **{seconds}** Másodpercre!")
 
 client.run(os.environ['token'])
