@@ -250,8 +250,8 @@ async def rezeros2(ctx):
 @client.command()
 async def darling(ctx):
     darembed = discord.Embed(title = "Darling in the franxx", description = "Sajnos nincs még második évad :(", color = discord.Colour.blue())
-    darembed.add_field(name = "ep1", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_01resz_Magyar_Felirat", inline = True)
-    darembed.add_field(name = "ep2", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_02resz_Magyar_Felirat", inline = True)
+    darembed.add_field(name = "ep1", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_01resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep2", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_02resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep3", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_03resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep4", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_04resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep5", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_05resz_Magyar_Felirat)", inline = True)
