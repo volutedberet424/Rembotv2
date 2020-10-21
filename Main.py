@@ -261,7 +261,7 @@ async def darling(ctx):
     darembed.add_field(name = "ep9", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_09resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep10", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_10resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep11", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_11resz_Magyar_Felirat)", inline = True)
-    darembed.add_field(name = "ep12", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_12resz_Magyar_Felirat", inline = True)
+    darembed.add_field(name = "ep12", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_12resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep13", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_13resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep14", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_14resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep15", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_15resz_Magyar_Felirat)", inline = True)
