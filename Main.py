@@ -50,12 +50,6 @@ async def on_guild_join(guild):
             await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak!```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
         break
 
-@client.event
-async def bejelentés(ctx, dcchannel): 
-    channel = client.get_channel(dcchannel)
-    await channel.send('hello')
-            
-
 @client.command()
 async def info(ctx):
     iembed = discord.Embed(title = "Rembot infók", description = "Egy anime köré épitett bot, de tud sok mást is! Például képmanipulálás, moderálás, és még sok mást is!!", color = discord.Colour.blue())
@@ -100,6 +94,7 @@ async def makerem(ctx, user: discord.Member = None):
     rtemplate.save("remedit.png")
 
     await ctx.send(file = discord.File("remedit.png"))
+
 
 
 @client.command()
@@ -193,6 +188,7 @@ async def votegay(ctx, member: discord.Member):
 async def watchanime(ctx):
     aniembed = discord.Embed(title = "Anime linkek", description = "Kérd le egy parancsal az itt található animék összes részét, évadát!", color = discord.Colour.green())
     aniembed.add_field(name = "Rezero", value = "r!rezero, r!rezeros2", inline = True)
+    aniembed.add_field(name = "Darling in the franx", value = "r!darling", inline = True)
     await ctx.send(embed=aniembed)
    
 
@@ -223,7 +219,7 @@ async def rezero(ctx):
     reembed.add_field(name = "ep22", value = "[Megtekintés](http://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_-_22)", inline = True)
     reembed.add_field(name = "ep23", value = "[Megtekintés](http://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_-_23)", inline = True)
     reembed.add_field(name = "ep24", value = "[Megtekintés](http://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_-_24)", inline = True)
-    reembed.add_field(name = "ep25", value = "[Megtekintés](http://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_-_25)", inline = True)
+    reembed.add_field(name = "ep25", value = "[Megtekintés](http://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_-_25_Vege_)", inline = True)
     reembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     reembed.set_thumbnail(url = "https://i5.walmartimages.com/asr/033a9851-afd8-4f5e-a9be-35197e8e1974_1.b506d4333c1c4cb93ae8b519f23e52b5.jpeg")
     
@@ -231,7 +227,7 @@ async def rezero(ctx):
 
 @client.command()
 async def rezeros2(ctx):
-    re2embed = discord.Embed(title = "Re:ZERO Starting Life in Another World S2", description = "", color = discord.Colour.blue())
+    re2embed = discord.Embed(title = "Re:ZERO Starting Life in Another World S2", description = "Ez az évad még jelenleg fut tehát új részek kikerülnek ide amikor kijönnek!", color = discord.Colour.blue())
     re2embed.add_field(name = "ep1", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2_evad_1resz_Magyar_Felirattal)", inline = True)
     re2embed.add_field(name = "ep2", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_2resz_Magyar_Felirattal)", inline = True)
     re2embed.add_field(name = "ep3", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_3resz_Magyar_Felirattal)", inline = True)
@@ -251,6 +247,37 @@ async def rezeros2(ctx):
     
     await ctx.send(embed=re2embed)    
 
+@client.command()
+async def darling(ctx):
+    darembed = discord.Embed(title = "Darling in the franxx", description = "Sajnos nincs még második évad :(", color = discord.Colour.blue())
+    darmbed.add_field(name = "ep1", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_01resz_Magyar_Felirat", inline = True)
+    darembed.add_field(name = "ep2", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_02resz_Magyar_Felirat", inline = True)
+    darembed.add_field(name = "ep3", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_03resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep4", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_04resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep5", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_05resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep6", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_06resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep7", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_07resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep8", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_08resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep9", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_09resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep10", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_10resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep11", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_11resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep12", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_12resz_Magyar_Felirat", inline = True)
+    darembed.add_field(name = "ep13", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_13resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep14", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_14resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep15", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_15resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep16", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_16resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep17", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_17resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep18", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_18resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep19", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_19resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep20", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_20resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep21", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_21resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep22", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_22resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep23", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_23resz_Magyar_Felirat)", inline = True)
+    darembed.add_field(name = "ep24", value = "[Megtekintés](https://indavideo.hu/video/Darling_in_the_FranXX_24resz_EndMagyar_Felirat)", inline = True)
+    darembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    darembed.set_thumbnail(url = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQV59nZDyGolIySBJcF-aFnLexrH5piD7uS6ONiFQwdn5TUhSXT")
+    
+    await ctx.send(embed=darembed)
 
 @client.command()
 async def invite(ctx):
