@@ -139,15 +139,7 @@ async def pofon(ctx, user: discord.Member = None):
     stemplate.save("slapedit.jpg")
 
     await ctx.send(file = discord.File("slapedit.jpg"))
-
-@client.command()
-async def doboznyitás(ctx, user: discord.Member = None)
-    user = ctx.author
-    await ctx.send(file = discord.File("box.png"))
-    await msg.add_reaction("🎊")
-    confirmation = await client.wait_for("reaction_add", check=check)
-if confirmation:
-    await ctx.send(file = discord.file("box.png"))     
+    
 
 
 @client.command()
