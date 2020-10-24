@@ -309,6 +309,11 @@ async def animeajánlás(ctx):
     await ctx.send(animeoutput)
 
 @client.command()
+async def lol(ctx):
+    await ctx.channel.purge(limit = 1)
+    await ctx.send("Mi volt ez a pusztító alpáriság?")
+
+@client.command()
 @commands.has_permissions(manage_messages = True)
 async def clear(ctx,amount=2):
     await ctx.channel.purge(limit = amount)
