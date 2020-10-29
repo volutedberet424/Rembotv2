@@ -118,24 +118,6 @@ async def szemét(ctx, user: discord.Member = None):
 
 
 @client.command()
-async def hornyjail(ctx, user: discord.Member = None):
-    if user == None:
-        user = ctx.author
-
-
-    ttemplate = Image.open("Bonktemplate.png")
-    asset = user.avatar_url_as(size = 128)
-    data = BytesIO(await asset.read())
-    pfp = Image.open(data)    
-    pfp = pfp.resize((200, 200))
-
-    ttemplate.paste(pfp, (100, 60))
-
-    ttemplate.save("trashedit.png")
-
-    await ctx.send(file = discord.File("trashedit.png"))
-
-@client.command()
 async def pofon(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
