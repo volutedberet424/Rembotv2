@@ -168,7 +168,7 @@ async def kézfogás(ctx, user: discord.Member = None):
 
 @client.command()
 async def updateok(ctx):
-    await ctx.send("-v0.1 A bot 24/7 fut")
+    await ctx.send("-V0.1.2 Extra animés, képes parancsok, Illetve vote parancs mivel a bot felkerült Top.gg re.")
 
 @client.command()
 async def vote(ctx):
@@ -313,7 +313,7 @@ async def animeajánlás(ctx):
     await ctx.send(animeoutput)
 
 @client.command()
-async def developement(ctx):
+async def development(ctx):
     await ctx.send("A botot fejleszteni egy kis időbe telik, mivel jelenleg egyedül dolgozom a projecten. Amennyiben segiteni szeretnél a bot fejlesztésében, és ismered a pythont mint programozási nyelvet, akkor keresd meg a bot fejlesztőjét (Volutedberet#1663)!")
 
 @client.command()
