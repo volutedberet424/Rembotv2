@@ -171,6 +171,10 @@ async def updateok(ctx):
     await ctx.send("-v0.1 A bot 24/7 fut")
 
 @client.command()
+async def vote(ctx):
+    await ctx.send("A botra itt tudsz szavazni hogy több emberhez eljusson: https://top.gg/bot/753645694799183963. Minden szavazatot nagyra értékelek")
+
+@client.command()
 async def randomszám(ctx, num1: int, num2: int):
         value = randint(num1, num2)
         await ctx.send(f"A számod az a:**{value}**")
@@ -295,7 +299,7 @@ async def ping(ctx):
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok", value = "ping", inline = True)
-    embed.add_field(name = "Alap parancsok", value = "info, parancsok, invite, updateok, uptime, randomszám", inline = True)
+    embed.add_field(name = "Alap parancsok", value = "info, vote, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
