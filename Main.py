@@ -299,7 +299,7 @@ async def ping(ctx):
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok", value = "ping", inline = True)
-    embed.add_field(name = "Alap parancsok", value = "info, vote, parancsok, invite, updateok, uptime, randomszám", inline = True)
+    embed.add_field(name = "Alap parancsok", value = "info, vote, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
@@ -311,6 +311,10 @@ async def parancsok(ctx):
 async def animeajánlás(ctx):
     animeoutput = random.choice(animes)
     await ctx.send(animeoutput)
+
+@client.command()
+async def developement(ctx):
+    await ctx.send("A botot fejleszteni egy kis időbe telik, mivel jelenleg egyedül dolgozom a projecten. Amennyiben segiteni szeretnél a bot fejlesztésében, és ismered a pythont mint programozási nyelvet, akkor keresd meg a bot fejlesztőjét (Volutedberet#1663)!")
 
 @client.command()
 async def lol(ctx):
