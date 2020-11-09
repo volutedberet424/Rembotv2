@@ -48,7 +48,7 @@ async def on_ready():
 async def on_guild_join(guild):
     for channel in guild.text_channels:
         if channel.permissions_for(guild.me).send_messages:
-            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak!```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
+            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! Amennyiben érdekel a bot fejlesztése kövesd a twitterét a készitőnek: https://twitter.com/volutedberet```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
         break
 
 @client.command()
@@ -300,7 +300,7 @@ async def ping(ctx):
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok", value = "ping", inline = True)
-    embed.add_field(name = "Alap parancsok", value = "info, vote, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
+    embed.add_field(name = "Alap parancsok", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
@@ -317,6 +317,11 @@ async def animeajánlás(ctx):
 @client.command()
 async def development(ctx):
     await ctx.send("A botot fejleszteni egy kis időbe telik, mivel jelenleg egyedül dolgozom a projecten. Amennyiben segiteni szeretnél a bot fejlesztésében, és ismered a pythont mint programozási nyelvet, akkor keresd meg a bot fejlesztőjét (Volutedberet#1663)!")
+
+@client.command()
+async def twitter(ctx):
+    await ctx.send("Amennyiben érdekel a bot fejlesztése akkor kövesd a twitteremet! Link: https://twitter.com/volutedberet")
+
 
 @client.command()
 async def lol(ctx):
@@ -350,7 +355,7 @@ async def slowmode(ctx, seconds: int):
 
 
 @client.command()
-async def parancsok(ctx):
+async def rejtélyek(ctx):
     spoop = discord.Embed(title = "Internetes rejtélyek", description = "Az összes itt található téma eléggé sötét! Meglehet hogy videók az archiveokban öngyilkosságokrol való felvételeket tartalmaznak majd, mindent csak saját felelőségre tekints meg! Az archiveokat parancsal lehet elérni, minden téma alatt ott lesz a parancs is hozzá!", color = discord.Colour.green())
     spoop.add_field(name = "Rorochan_1999", value = "r!rorochan99", inline = True)
     spoop.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
