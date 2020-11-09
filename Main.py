@@ -10,7 +10,6 @@ from io import BytesIO
 from discord import VoiceClient
 from random import seed
 from random import randint
-from bs4 import BeautifulSoup     
 
 def get_prefix(client, message):
     with open("prefixes.json", "r") as f:
