@@ -18,7 +18,8 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 
 def __init__(self, bot):
     self.bot = bot
-    self.token = os.environ['top.gg'] 
+    self.token = ' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1MzY0NTY5NDc5OTE4Mzk2MyIsImJvdCI6dHJ1ZSwiaWF0IjoxNjA0OTU3NTAyfQ.mb55JBnvLGhsoFxpBjzynIrzxX8GM4v9jMvCdmkt8kY'
+    #ez egy másik token nem a bot tokenje! nem mész vele semmire, ha ez a rendes token lenne akkor discord automatikusan megváltoztatná :)
     self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True) 
 
 async def on_guild_post():
