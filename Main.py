@@ -16,13 +16,13 @@ client = commands.Bot(command_prefix = "r!")
 animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "The Rising of the Shield Hero", "Kill la Kill", "Mob Psycho 100", "Mob Psycho 100 S2", "Re:ZERO Starting Life in Another World S2", "One Punch Man", "One Punch Man S2", "Overlord", "Overlord S2", "Overlord S3", "Satsuriku no Tenshi", "Sakura-sou no Pet na Kanojo", "Youjo Senki", "Uzaki-chan Wants to Hang Out!", "Tejina-senpai", "That Time I Got Reincarnated as a Slime", "Mekakucity Actors", "Tower of god", "Black Rock Shooter", "	Chuunibyou demo Koi ga Shitai!", "Re:zero Memory snow OVA", "Konosuba", "Konosuba S2", "Mushikago no Cagaster", "Neon Genesis Evangelion"
 , "Shokugeki no Souma(Foodwars!)", "Shokugeki no Souma(Foodwars!) S2", "Shokugeki no Souma(Foodwars!) S3", "Shokugeki no Souma(Foodwars!) S4", "Shokugeki no Souma(Foodwars!) S5", "Attack on titan", "Attack on titan S2", "Attack on titan S3"]
 
-    def __init__(self, bot):
-        self.bot = bot
-        self.token = os.environ['top.gg'] 
-        self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True) 
+def __init__(self, bot):
+    self.bot = bot
+    self.token = os.environ['top.gg'] 
+    self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True) 
 
-    async def on_guild_post():
-        print("Szerver számláló frissítve!!")
+async def on_guild_post():
+    print("Szerver számláló frissítve!!")
 
 
 async def status_task():
