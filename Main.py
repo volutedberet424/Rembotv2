@@ -3,19 +3,12 @@ import random
 import asyncio
 import os
 import json 
-import requests
 from discord.ext import commands
 from PIL import Image
 from io import BytesIO
 from discord import VoiceClient
 from random import seed
 from random import randint
-
-def get_prefix(client, message):
-    with open("prefixes.json", "r") as f:
-        prefixes = json.load(f)
-    return prefixes[str(message.guild.id)]      
-
 
 
 client = commands.Bot(command_prefix = "r!")
