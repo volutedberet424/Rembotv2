@@ -168,7 +168,7 @@ async def kézfogás(ctx, user: discord.Member = None):
 
 @client.command()
 async def updateok(ctx):
-    await ctx.send("-V0.1.2 Extra animés, képes parancsok, Illetve vote parancs mivel a bot felkerült Top.gg re.")
+    await ctx.send("-V0.1.2 Extra animés, képes parancsok, Illetve vote parancs mivel a bot felkerült Top.gg re.    ")
 
 @client.command()
 async def vote(ctx):
