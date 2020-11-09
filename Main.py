@@ -305,6 +305,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
     embed.add_field(name = "Animével kapcsolatos parancsok", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
+    embed.add_field(name = "Internet rejtélyek:", value = "", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
@@ -346,5 +347,26 @@ async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
 async def slowmode(ctx, seconds: int):
     await ctx.channel.edit(slowmode_delay=seconds)
     await ctx.send(f"Erre a csatornára slowmode lett rakva **{seconds}** Másodpercre!")
+
+
+@client.command()
+async def parancsok(ctx):
+    spoop = discord.Embed(title = "Internetes rejtélyek", description = "Az összes itt található téma eléggé sötét! Meglehet hogy videók az archiveokban öngyilkosságokrol való felvételeket tartalmaznak majd, mindent csak saját felelőségre tekints meg! Az archiveokat parancsal lehet elérni, minden téma alatt ott lesz a parancs is hozzá!", color = discord.Colour.green())
+    spoop.add_field(name = "Rorochan_1999", value = "r!rorochan99", inline = True)
+    spoop.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=spoop)
+
+
+@client.command()
+async def rorochan99(ctx):
+    roro = discord.Embed(title = "Rorochan1999 öngyilkossága élő adásban.", description = "Rorochan 2013 novemberében követett el öngyilkosságot élő adásban, a következő információk nem biztos hogy miliméter pontosak!", color = discord.Colour.green())
+    roro.add_field(name = "Alapok:", value = "Az eset 2013 novemberében történt, de viszont nem lett felkapott 2020 januárjáig. 2020 januárjában egy zene került ki mint egy megemlékezés a halálára, a zene után kezdett az ügy növekedni populárisságban, ezek után kerültek felszínre a régi livejai amiken részei archiveolva vannak. Link a zenéhez: [Zene](https://youtu.be/hc0ZDaAZQT0)", inline = True)
+    roro.add_field(name = "Archiveolt videók:", value = "[Archive1](https://youtu.be/jOwxlLTVNDc) [Archive2](https://youtu.be/UcS_9m11aHE) ", inline = True)
+    roro.add_field(name = "Detaileltebb videók az ügyben:", value = "Az ügyet egy pár küldföldi youtuber is belenézett, itt vannak linkek a videókhoz [Banner videója](https://youtu.be/RmK5wOHK9uQ) [ScareTheater videója](https://youtu.be/1wdiWVBSaM8) ", inline = True)
+    roro.add_field(name = "Maga az öngyilkosság:", value = " 2013 novemberében a házuk 13 emeletéröl ugrott le, az egészet streamelte, chatlog szerint mindenki mondta neki hogy ne ugorjon. A streamröl ahol leugrott van archive de viszont linket nem adok mivel nem akarok tiszteletlen lenni.", inline = True)
+    roro.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=roro)
+
+
 
 client.run(os.environ['token'])
