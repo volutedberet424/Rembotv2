@@ -2,13 +2,15 @@ import discord
 import random
 import asyncio
 import os
-import json
+import json 
+import requests
 from discord.ext import commands
 from PIL import Image
 from io import BytesIO
 from discord import VoiceClient
 from random import seed
 from random import randint
+from bs4 import BeautifulSoup     
 
 def get_prefix(client, message):
     with open("prefixes.json", "r") as f:
@@ -172,7 +174,7 @@ async def updateok(ctx):
 
 @client.command()
 async def vote(ctx):
-    await ctx.send("A botra itt tudsz szavazni hogy több emberhez eljusson: https://top.gg/bot/753645694799183963. Minden szavazatot nagyra értékelek")
+    await ctx.send("A botra itt tudsz szavazni hogy több emberhez eljusson: https://top.gg/bot/753645694799183963/vote . Minden szavazatot nagyra értékelek")
 
 @client.command()
 async def randomszám(ctx, num1: int, num2: int):
