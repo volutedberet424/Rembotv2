@@ -422,4 +422,12 @@ async def laughat(ctx, member: discord.Member = None):
     laembed.set_image(url="https://i.kym-cdn.com/photos/images/original/000/619/204/8c0.gif")
     await ctx.send(embed=laembed)
 
+@client.command()
+async def shoot(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    shembed = discord.Embed(title = f"{ctx.author} lelőtte {member} (e)t ", description = "", color = discord.Colour.green())
+    shembed.set_image(url="https://cdn.discordapp.com/attachments/775840670069030952/775840696170577940/tenor.gif")
+    await ctx.send(embed=shembed)
+
 client.run(os.environ['token'])
