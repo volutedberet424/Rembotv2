@@ -381,7 +381,7 @@ async def profil(ctx, member: discord.Member = None):
 async def hug(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    hugembed = discord.Embed(title = f"{ctx.author} megöleli {member} t.", description = "", color = discord.Colour.green())
+    hugembed = discord.Embed(title = f"{ctx.author} megöleli {member} (e)t.", description = "", color = discord.Colour.green())
     hugembed.set_image(url="https://i.imgur.com/r9aU2xv.gif")
     await ctx.send(embed=hugembed)
 
@@ -390,7 +390,7 @@ async def hug(ctx, member: discord.Member = None):
 async def kiss(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    kissembed = discord.Embed(title = f"{ctx.author} megcsókolta {member} t.", description = "", color = discord.Colour.green())
+    kissembed = discord.Embed(title = f"{ctx.author} megcsókolta {member} (e)t.", description = "", color = discord.Colour.green())
     kissembed.set_image(url="https://media1.giphy.com/media/FqBTvSNjNzeZG/giphy.gif")
     await ctx.send(embed=kissembed)
 
@@ -398,7 +398,7 @@ async def kiss(ctx, member: discord.Member = None):
 async def headpat(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    headembed = discord.Embed(title = f"{ctx.author} megsimogatta {member} t.", description = "", color = discord.Colour.green())
+    headembed = discord.Embed(title = f"{ctx.author} megsimogatta {member} (e)t.", description = "", color = discord.Colour.green())
     headembed.set_image(url="https://64.media.tumblr.com/a72dd82535f3e7accd827c202dacc09a/tumblr_pfyiqz0pFL1th206io1_640.gif")
     await ctx.send(embed=headembed)
 
