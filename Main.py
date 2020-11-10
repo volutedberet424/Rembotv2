@@ -312,7 +312,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás", inline = True)
     embed.add_field(name = "Animével kapcsolatos parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
-    embed.add_field(name = "Roleplay(4)", value = "hug, kiss, headpat, profil(Nincs még kész)", inline = True)
+    embed.add_field(name = "Roleplay(7)", value = "hug, kiss, headpat, cry, laugh, laughat profil(Nincs még kész)", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
@@ -401,5 +401,25 @@ async def headpat(ctx, member: discord.Member = None):
     headembed = discord.Embed(title = f"{ctx.author} megsimogatta {member} (e)t.", description = "", color = discord.Colour.green())
     headembed.set_image(url="https://64.media.tumblr.com/a72dd82535f3e7accd827c202dacc09a/tumblr_pfyiqz0pFL1th206io1_640.gif")
     await ctx.send(embed=headembed)
+
+@client.command()
+async def cry(ctx):
+    cryembed = discord.Embed(title = f"{ctx.author} elsírta magát :(", description = "", color = discord.Colour.green())
+    cryembed.set_image(url="https://i.pinimg.com/originals/b4/b1/64/b4b1640525ecadfa1030e6096f3ec842.gif")
+    await ctx.send(embed=cryembed)
+
+@client.command()
+async def laugh(ctx):
+    lembed = discord.Embed(title = f"{ctx.author} elnevette magát :D ", description = "", color = discord.Colour.green())
+    lembed.set_image(url="https://media.tenor.com/images/a2741132a4f7ddf637513737364d87d9/tenor.gif")
+    await ctx.send(embed=lembed)
+
+@client.command()
+async def laughat(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    laembed = discord.Embed(title = f"{ctx.author} kinevette {member} (e)t ", description = "", color = discord.Colour.green())
+    laembed.set_image(url="https://i.kym-cdn.com/photos/images/original/000/619/204/8c0.gif")
+    await ctx.send(embed=laembed)
 
 client.run(os.environ['token'])
