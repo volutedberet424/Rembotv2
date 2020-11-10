@@ -124,6 +124,7 @@ async def hornyjail(ctx, user: discord.Member = None):
 
 
 
+
 @client.command()
 async def szemét(ctx, user: discord.Member = None):
     if user == None:
