@@ -305,14 +305,14 @@ async def ping(ctx):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 32", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(1)", value = "ping", inline = True)
     embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
-    embed.add_field(name = "Roleplay(7)", value = "hug, kiss, headpat, cry, laugh, laughat, profil(Nincs még kész)", inline = True)
+    embed.add_field(name = "Roleplay(8)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, profil(Nincs még kész)", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
