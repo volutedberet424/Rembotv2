@@ -104,6 +104,24 @@ async def makerem(ctx, user: discord.Member = None):
 
     await ctx.send(file = discord.File("remedit.png"))
 
+@client.command()
+async def hornyjail(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+
+
+    rtemplate = Image.open("bonktemplate.png")
+    asset = user.avatar_url_as(size = 128)
+    data = BytesIO(await asset.read())
+    pfp = Image.open(data)    
+    pfp = pfp.resize((300, 300))
+
+    rtemplate.paste(pfp, (950, 440))
+
+    rtemplate.save("bonk.png")
+
+    await ctx.send(file = discord.File("bonk.png"))
+
 
 
 @client.command()
@@ -310,7 +328,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
-    embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás", inline = True)
+    embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
     embed.add_field(name = "Roleplay(8)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, profil(Nincs még kész)", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
