@@ -17,15 +17,15 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 , "Shokugeki no Souma(Foodwars!)", "Shokugeki no Souma(Foodwars!) S2", "Shokugeki no Souma(Foodwars!) S3", "Shokugeki no Souma(Foodwars!) S4", "Shokugeki no Souma(Foodwars!) S5", "Attack on titan", "Attack on titan S2", "Attack on titan S3"]
 
 class TopGG(commands.Cog):
-    """Handles interactions with the top.gg API"""
+   
 
-    def __init__(self, bot):
-        self.bot = bot
-        self.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1MzY0NTY5NDc5OTE4Mzk2MyIsImJvdCI6dHJ1ZSwiaWF0IjoxNjA0OTU3NTAyfQ.mb55JBnvLGhsoFxpBjzynIrzxX8GM4v9jMvCdmkt8kY' # ez a dbl token nem a dc s token, semmire nem mész vele :)
-        self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True) 
+def __init__(self, bot):
+    self.bot = bot
+    self.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1MzY0NTY5NDc5OTE4Mzk2MyIsImJvdCI6dHJ1ZSwiaWF0IjoxNjA0OTU3NTAyfQ.mb55JBnvLGhsoFxpBjzynIrzxX8GM4v9jMvCdmkt8kY' # ez a dbl token nem a dc s token, semmire nem mész vele :)
+    self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True) 
 
-    async def on_guild_post():
-        print("Server count posted successfully")
+async def on_guild_post():
+    print("Server count posted successfully")
 
 def setup(bot):
     bot.add_cog(TopGG(bot))
