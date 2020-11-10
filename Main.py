@@ -306,13 +306,13 @@ async def ping(ctx):
 @client.command()
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r!", color = discord.Colour.green())
-    embed.add_field(name = "Teszt parancsok", value = "ping", inline = True)
-    embed.add_field(name = "Alap parancsok", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
-    embed.add_field(name = "Moderátor parancsok", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok", value = "votegay", inline = True)
-    embed.add_field(name = "Képes parancsok", value = "makerem, pofon, szemét, kézfogás", inline = True)
-    embed.add_field(name = "Animével kapcsolatos parancsok", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
-    embed.add_field(name = "Internet rejtélyek:", value = "", inline = True)
+    embed.add_field(name = "Teszt parancsok(1)", value = "ping", inline = True)
+    embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
+    embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
+    embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
+    embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás", inline = True)
+    embed.add_field(name = "Animével kapcsolatos parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
+    embed.add_field(name = "Roleplay(4)", value = "hug, kiss, headpat, profil(Nincs még kész)", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
@@ -362,5 +362,44 @@ async def slowmode(ctx, seconds: int):
 
 
 
+@client.command()
+async def profil(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    profilembed = discord.Embed(title = f"{member} profilja", description = f"{member} adatai. Még nem működik a profil, mivel még nincs kész a mentés rendszer! **Ez még csak egy concept hogy hogyan fog kinézni!**", color = discord.Colour.green())
+    profilembed.set_thumbnail(url=member.avatar_url)
+    profilembed.add_field(name = "Készpénz:", value = "0")
+    profilembed.add_field(name = "Bank:", value = "0")
+    profilembed.add_field(name = "Szint:", value = "0")
+    profilembed.add_field(name = "XP:", value = "▰▰▱▱▱▱▱")
+    profilembed.add_field(name = "Itemek:", value = "0")
+    profilembed.add_field(name = "Munka:", value = "Munkanélküli")
+    await ctx.send(embed=profilembed)
+##rp
+
+@client.command()
+async def hug(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    hugembed = discord.Embed(title = f"{ctx.author} megöleli {member} t.", description = "", color = discord.Colour.green())
+    hugembed.set_image(url="https://i.imgur.com/r9aU2xv.gif")
+    await ctx.send(embed=hugembed)
+
+
+@client.command()
+async def kiss(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    kissembed = discord.Embed(title = f"{ctx.author} megcsókolta {member} t.", description = "", color = discord.Colour.green())
+    kissembed.set_image(url="https://media1.giphy.com/media/FqBTvSNjNzeZG/giphy.gif")
+    await ctx.send(embed=kissembed)
+
+@client.command()
+async def headpat(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    headembed = discord.Embed(title = f"{ctx.author} megsimogatta {member} t.", description = "", color = discord.Colour.green())
+    headembed.set_image(url="https://64.media.tumblr.com/a72dd82535f3e7accd827c202dacc09a/tumblr_pfyiqz0pFL1th206io1_640.gif")
+    await ctx.send(embed=headembed)
 
 client.run(os.environ['token'])
