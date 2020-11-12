@@ -338,7 +338,7 @@ async def parancsok(ctx):
 @client.command()
 async def animeajánlás(ctx):
     animeoutput = random.choice(animes)
-    await ctx.send(animeoutput)
+    await ctx.send(animeoutput) 
 
 @client.command()
 async def development(ctx):
