@@ -325,14 +325,14 @@ async def ping(ctx):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 32", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 33", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(1)", value = "ping", inline = True)
     embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
-    embed.add_field(name = "Roleplay(8)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, profil(Nincs még kész)", inline = True)
+    embed.add_field(name = "Roleplay(9)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, profil(Nincs még kész)", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
@@ -449,5 +449,14 @@ async def shoot(ctx, member: discord.Member = None):
     shembed = discord.Embed(title = f"{ctx.author} lelőtte {member} (e)t ", description = "", color = discord.Colour.green())
     shembed.set_image(url="https://cdn.discordapp.com/attachments/775840670069030952/775840696170577940/tenor.gif")
     await ctx.send(embed=shembed)
+
+@client.command()
+async def bite(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    shembed = discord.Embed(title = f"{ctx.author} megharapta {member} (e)t ", description = "", color = discord.Colour.green())
+    shembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
+    await ctx.send(embed=shembed)
+
 
 client.run(os.environ['token'])
