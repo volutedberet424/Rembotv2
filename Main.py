@@ -463,8 +463,8 @@ async def smack(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
     smaembed = discord.Embed(title = f"{ctx.author} megütötte {member} (e)t ", description = "", color = discord.Colour.green())
-    smambed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776935394695577610/tenor.gif")
-    await ctx.send(embed=smambed)
+    smaembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776935394695577610/tenor.gif")
+    await ctx.send(embed=smaembed)
 
 @client.command()
 async def slap(ctx, member: discord.Member = None):
