@@ -458,5 +458,13 @@ async def bite(ctx, member: discord.Member = None):
     shembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
     await ctx.send(embed=shembed)
 
+@client.command()
+async def fuck(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    shembed = discord.Embed(title = f"{ctx.author} az gecire horny", description = "", color = discord.Colour.green())
+    shembed.set_image(url="https://i.imgur.com/LxG1qGl.gif")
+    await ctx.send(embed=shembed)
+
 
 client.run(os.environ['token'])
