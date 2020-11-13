@@ -454,17 +454,34 @@ async def shoot(ctx, member: discord.Member = None):
 async def bite(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    shembed = discord.Embed(title = f"{ctx.author} megharapta {member} (e)t ", description = "", color = discord.Colour.green())
-    shembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
-    await ctx.send(embed=shembed)
+    bitembed = discord.Embed(title = f"{ctx.author} megharapta {member} (e)t ", description = "", color = discord.Colour.green())
+    bitmbed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
+    await ctx.send(embed=bitembed)
+
+@client.command()
+async def smack(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    smaembed = discord.Embed(title = f"{ctx.author} megütötte {member} (e)t ", description = "", color = discord.Colour.green())
+    smambed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776935394695577610/tenor.gif")
+    await ctx.send(embed=smambed)
+
+@client.command()
+async def slap(ctx, member: discord.Member = None):
+    if member == None:
+        member = ctx.author
+    slambed = discord.Embed(title = f"{ctx.author} megpofozta {member} (e)t ", description = "", color = discord.Colour.green())
+    slambed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776935679791202304/tenor_1.gif")
+    await ctx.send(embed=slambed)
+
 
 @client.command()
 async def fuck(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    shembed = discord.Embed(title = f"{ctx.author} az gecire horny", description = "", color = discord.Colour.green())
-    shembed.set_image(url="https://i.imgur.com/LxG1qGl.gif")
-    await ctx.send(embed=shembed)
+    fembed = discord.Embed(title = f"{ctx.author} az gecire horny", description = "", color = discord.Colour.green())
+    fembed.set_image(url="https://i.imgur.com/LxG1qGl.gif")
+    await ctx.send(embed=fembed)
 
 
 client.run(os.environ['token'])
