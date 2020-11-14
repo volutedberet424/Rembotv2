@@ -67,7 +67,7 @@ async def info(ctx):
     iembed.add_field(name = "Fontosabb infók:", value = "prefix: r!, parancslista: r!parancsok", inline = True)
     iembed.add_field(name = "Support szerver", value = "[Invite](https://discord.gg/YDRRKQA)", inline = True)
     iembed.add_field(name = "Source code:", value = "[Github repo](https://github.com/volutedberet424/Rembotv2)", inline = True)
-    iembed.add_field(name = "Be akarod tenni a botot a szerveredre?:", value = "[Invite](https://discord.com/api/oauth2/authorize?client_id=753645694799183963&permissions=8&scope=bot)", inline = True)
+    iembed.add_field(name = "Invite a bothoz:", value = "[Invite](https://discord.com/api/oauth2/authorize?client_id=753645694799183963&permissions=8&scope=bot)", inline = True)
     iembed.set_thumbnail(url = "https://vignette.wikia.nocookie.net/rezero/images/0/02/Rem_Anime.png/revision/latest/window-crop/width/200/x-offset/281/y-offset/0/window-width/721/window-height/720?cb=20160730213532")
     iembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=iembed)
@@ -401,7 +401,7 @@ async def profil(ctx, member: discord.Member = None):
 async def hug(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    hugembed = discord.Embed(title = f"{ctx.author} megöleli {member} (e)t.", description = "", color = discord.Colour.green())
+    hugembed = discord.Embed(title = f"{ctx.author.name} megöleli {member.name} (e)t.", description = "", color = discord.Colour.green())
     hugembed.set_image(url="https://i.imgur.com/r9aU2xv.gif")
     await ctx.send(embed=hugembed)
 
@@ -410,7 +410,7 @@ async def hug(ctx, member: discord.Member = None):
 async def kiss(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    kissembed = discord.Embed(title = f"{ctx.author} megcsókolta {member} (e)t.", description = "", color = discord.Colour.green())
+    kissembed = discord.Embed(title = f"{ctx.author.name} megcsókolta {member.name} (e)t.", description = "", color = discord.Colour.green())
     kissembed.set_image(url="https://media1.giphy.com/media/FqBTvSNjNzeZG/giphy.gif")
     await ctx.send(embed=kissembed)
 
@@ -418,19 +418,19 @@ async def kiss(ctx, member: discord.Member = None):
 async def headpat(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    headembed = discord.Embed(title = f"{ctx.author} megsimogatta {member} (e)t.", description = "", color = discord.Colour.green())
+    headembed = discord.Embed(title = f"{ctx.author.name} megsimogatta {member.name} (e)t.", description = "", color = discord.Colour.green())
     headembed.set_image(url="https://64.media.tumblr.com/a72dd82535f3e7accd827c202dacc09a/tumblr_pfyiqz0pFL1th206io1_640.gif")
     await ctx.send(embed=headembed)
 
 @client.command()
 async def cry(ctx):
-    cryembed = discord.Embed(title = f"{ctx.author} elsírta magát :(", description = "", color = discord.Colour.green())
+    cryembed = discord.Embed(title = f"{ctx.author.name} elsírta magát :(", description = "", color = discord.Colour.green())
     cryembed.set_image(url="https://i.pinimg.com/originals/b4/b1/64/b4b1640525ecadfa1030e6096f3ec842.gif")
     await ctx.send(embed=cryembed)
 
 @client.command()
 async def laugh(ctx):
-    lembed = discord.Embed(title = f"{ctx.author} elnevette magát :D ", description = "", color = discord.Colour.green())
+    lembed = discord.Embed(title = f"{ctx.author.name} elnevette magát :D ", description = "", color = discord.Colour.green())
     lembed.set_image(url="https://media.tenor.com/images/a2741132a4f7ddf637513737364d87d9/tenor.gif")
     await ctx.send(embed=lembed)
 
@@ -438,7 +438,7 @@ async def laugh(ctx):
 async def laughat(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    laembed = discord.Embed(title = f"{ctx.author} kinevette {member} (e)t ", description = "", color = discord.Colour.green())
+    laembed = discord.Embed(title = f"{ctx.author.name} kinevette {member.name} (e)t ", description = "", color = discord.Colour.green())
     laembed.set_image(url="https://i.kym-cdn.com/photos/images/original/000/619/204/8c0.gif")
     await ctx.send(embed=laembed)
 
@@ -446,7 +446,7 @@ async def laughat(ctx, member: discord.Member = None):
 async def shoot(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    shembed = discord.Embed(title = f"{ctx.author} lelőtte {member} (e)t ", description = "", color = discord.Colour.green())
+    shembed = discord.Embed(title = f"{ctx.author.name} lelőtte {member.name} (e)t ", description = "", color = discord.Colour.green())
     shembed.set_image(url="https://cdn.discordapp.com/attachments/775840670069030952/775840696170577940/tenor.gif")
     await ctx.send(embed=shembed)
 
@@ -454,7 +454,7 @@ async def shoot(ctx, member: discord.Member = None):
 async def bite(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    bitembed = discord.Embed(title = f"{ctx.author} megharapta {member} (e)t ", description = "", color = discord.Colour.green())
+    bitembed = discord.Embed(title = f"{ctx.author.name} megharapta {member.name} (e)t ", description = "", color = discord.Colour.green())
     bitembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
     await ctx.send(embed=bitembed)
 
@@ -462,7 +462,7 @@ async def bite(ctx, member: discord.Member = None):
 async def smack(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    smaembed = discord.Embed(title = f"{ctx.author} megütötte {member} (e)t ", description = "", color = discord.Colour.green())
+    smaembed = discord.Embed(title = f"{ctx.author.name} megütötte {member.name} (e)t ", description = "", color = discord.Colour.green())
     smaembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776935394695577610/tenor.gif")
     await ctx.send(embed=smaembed)
 
@@ -470,7 +470,7 @@ async def smack(ctx, member: discord.Member = None):
 async def slap(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    slambed = discord.Embed(title = f"{ctx.author} megpofozta {member} (e)t ", description = "", color = discord.Colour.green())
+    slambed = discord.Embed(title = f"{ctx.author.name} megpofozta {member.name} (e)t ", description = "", color = discord.Colour.green())
     slambed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776935679791202304/tenor_1.gif")
     await ctx.send(embed=slambed)
 
@@ -479,7 +479,7 @@ async def slap(ctx, member: discord.Member = None):
 async def fuck(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
-    fembed = discord.Embed(title = f"{ctx.author} az gecire horny", description = "", color = discord.Colour.green())
+    fembed = discord.Embed(title = f"{ctx.author.name} az gecire horny", description = "", color = discord.Colour.green())
     fembed.set_image(url="https://i.imgur.com/LxG1qGl.gif")
     await ctx.send(embed=fembed)
 
