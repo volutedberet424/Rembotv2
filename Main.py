@@ -396,7 +396,6 @@ async def profil(ctx, member: discord.Member = None):
     profilembed.add_field(name = "Munka:", value = "Munkanélküli")
     await ctx.send(embed=profilembed)
 
-
 #rp
 
 @client.command()
@@ -485,5 +484,12 @@ async def fuck(ctx, member: discord.Member = None):
     fembed.set_image(url="https://i.imgur.com/LxG1qGl.gif")
     await ctx.send(embed=fembed)
 
-    
+
+@client.command()
+async def blush(ctx):
+    blembed = discord.Embed(title = f"{ctx.author.name} elpirult", description = "", color = discord.Colour.green())
+    blembed.set_image(url="https://i.pinimg.com/originals/ac/2f/1f/ac2f1f727d4d96a6a7c4fb5ae5a41cf0.gif")
+    await ctx.send(embed=blembed)
+
+#client run cuccos
 client.run(os.environ['token'])
