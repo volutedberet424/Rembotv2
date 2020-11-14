@@ -378,7 +378,7 @@ async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
 @commands.has_permissions(manage_messages = True)
 async def slowmode(ctx, seconds: int):
     await ctx.channel.edit(slowmode_delay=seconds)
-    await ctx.send(f"Erre a csatornára slowmode lett rakva **{seconds}** Másodpercre!")
+    await ctx.send(f"Erre a csatornára slowmode lett rakva **{seconds}** másodpercre!")
 
 
 
@@ -395,7 +395,9 @@ async def profil(ctx, member: discord.Member = None):
     profilembed.add_field(name = "Itemek:", value = "0")
     profilembed.add_field(name = "Munka:", value = "Munkanélküli")
     await ctx.send(embed=profilembed)
-##rp
+
+
+#rp
 
 @client.command()
 async def hug(ctx, member: discord.Member = None):
@@ -483,5 +485,5 @@ async def fuck(ctx, member: discord.Member = None):
     fembed.set_image(url="https://i.imgur.com/LxG1qGl.gif")
     await ctx.send(embed=fembed)
 
-
+    
 client.run(os.environ['token'])
