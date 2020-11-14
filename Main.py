@@ -327,7 +327,7 @@ async def ping(ctx):
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 35", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(1)", value = "ping", inline = True)
-    embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, rejtélyek, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
+    embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
     embed.add_field(name = "Képes parancsok(4)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
@@ -455,7 +455,7 @@ async def bite(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
     bitembed = discord.Embed(title = f"{ctx.author} megharapta {member} (e)t ", description = "", color = discord.Colour.green())
-    bitmbed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
+    bitembed.set_image(url="https://cdn.discordapp.com/attachments/541982855639859201/776924443322220624/tenor.gif")
     await ctx.send(embed=bitembed)
 
 @client.command()
