@@ -58,7 +58,7 @@ async def on_ready():
 async def on_guild_join(guild):
     for channel in guild.text_channels:
         if channel.permissions_for(guild.me).send_messages:
-            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! Amennyiben érdekel a bot fejlesztése kövesd a twitterét a készitőnek: https://twitter.com/volutedberet```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
+            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! ```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
         break
 
 @client.command()
