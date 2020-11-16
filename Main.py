@@ -332,7 +332,7 @@ async def servercount(ctx):
 @client.command()
 async def parancsok(ctx):
     embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 36", color = discord.Colour.green())
-    embed.add_field(name = "Teszt parancsok(1)", value = "ping", inline = True)
+    embed.add_field(name = "Teszt parancsok(1)", value = "ping, servercount", inline = True)
     embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
