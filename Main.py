@@ -324,6 +324,10 @@ async def invite(ctx):
 async def ping(ctx):
     await ctx.send(f"A válaszidőm:```{round(client.latency * 1000)}ms```")
     
+@client.command()
+async def servercount(ctx):
+    await ctx.send(f"Jelenleg {len(client.guilds)} szerveren vagyok bent.")
+        
 
 @client.command()
 async def parancsok(ctx):
