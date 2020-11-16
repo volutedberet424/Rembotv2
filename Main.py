@@ -37,6 +37,8 @@ async def status_task():
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name=f"{len(client.guilds)} szerveren van bent! │ r!info"))
         await asyncio.sleep(10)
+        await client.change_presence(activity=discord.Game(name="Mehetnek a karácsonyi zenék! │ r!info"))
+        await asyncio.sleep(10)
         status_task()
         client.loop.create_task(status_task())
 
