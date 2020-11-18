@@ -339,7 +339,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Teszt parancsok(1)", value = "ping, servercount", inline = True)
     embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok(1)", value = "votegay", inline = True)
+    embed.add_field(name = "Funolós parancsok(1)", value = "votegay, uwu", inline = True)
     embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
     embed.add_field(name = "Roleplay(12)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
@@ -354,6 +354,11 @@ async def animeajánlás(ctx):
 @client.command()
 async def development(ctx):
     await ctx.send("A botot fejleszteni egy kis időbe telik, mivel jelenleg egyedül dolgozom a projecten. Amennyiben segiteni szeretnél a bot fejlesztésében, és ismered a pythont mint programozási nyelvet, akkor keresd meg a bot fejlesztőjét (Volutedberet#1663)!")
+
+@client.command()
+async def uwu(ctx):
+    await ctx.send(f"{ctx.author} UwU! :3")
+
 
 @client.command()
 async def twitter(ctx):
