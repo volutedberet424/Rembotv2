@@ -378,7 +378,7 @@ async def kick(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
     await ctx.send(f"{member} Ki lett kickelve a következő ok miatt: ```{indok}```")
 
 @client.command()
-#@commands.has_permissions(ban_members = True)
+@commands.has_permissions(ban_members = True)
 async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
     await member.ban(reason=indok)
     await ctx.send(f"{member} Ki lett bannolva a következő ok miatt: ```{indok}```")
