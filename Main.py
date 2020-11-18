@@ -413,7 +413,7 @@ async def hug(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
     hugembed = discord.Embed(title = f"{ctx.author.name} megöleli {member.name} (e)t.", description = "", color = discord.Colour.green())
-    hugembed.set_image(url="https://i.imgur.com/r9aU2xv.gif")
+    hugembed.set_image(url="https://i.pinimg.com/originals/f2/80/5f/f2805f274471676c96aff2bc9fbedd70.gif")
     await ctx.send(embed=hugembed)
 
 
