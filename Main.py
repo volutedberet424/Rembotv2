@@ -336,10 +336,9 @@ async def servercount(ctx):
 async def howsimp(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
-
-    value = randint('0', '100')    
-    await ctx.send(f"{user} az {value}% ban simp!")
     
+    await ctx.send(f"{user} az {random.randint(0,100)}% ban simp!")
+         
 
 @client.command()
 async def parancsok(ctx):
