@@ -337,7 +337,7 @@ async def howsimp(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
     
-    await ctx.send(f"{user} az {random.randint(0,100)}% ban simp!")
+    await ctx.send(f"{user.mention} az {random.randint(0,100)}% ban simp!")
          
 
 @client.command()
