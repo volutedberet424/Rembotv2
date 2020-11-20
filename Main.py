@@ -332,14 +332,22 @@ async def ping(ctx):
 async def servercount(ctx):
     await ctx.send(f"Jelenleg {len(client.guilds)} szerveren vagyok bent.")
         
+@client.command()
+async def howsimp(ctx, user : discord.Member):
+    if user == None:
+        user = ctx.author
+
+    value = randint('0', '100')    
+    await ctx.send(f"{user} az {value}% ban simp!")
+    
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 37", color = discord.Colour.green())
-    embed.add_field(name = "Teszt parancsok(1)", value = "ping, servercount", inline = True)
-    embed.add_field(name = "Alap parancsok(10)", value = "twitter, info, vote, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 39", color = discord.Colour.green())
+    embed.add_field(name = "Teszt parancsok(2)", value = "ping, servercount", inline = True)
+    embed.add_field(name = "Alap parancsok(11)", value = "twitter, info, vote, uwu, development, parancsok, invite, updateok, uptime, randomszám", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok(2)", value = "votegay, uwu", inline = True)
+    embed.add_field(name = "Funolós parancsok(2)", value = "votegay, howsimp", inline = True)
     embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
     embed.add_field(name = "Roleplay(12)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
