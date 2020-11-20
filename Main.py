@@ -333,7 +333,7 @@ async def servercount(ctx):
     await ctx.send(f"Jelenleg {len(client.guilds)} szerveren vagyok bent.")
         
 @client.command()
-async def howsimp(ctx, user : discord.Member):
+async def howsimp(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
 
