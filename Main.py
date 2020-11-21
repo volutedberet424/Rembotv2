@@ -387,9 +387,9 @@ async def lol(ctx):
 @client.command()
 @commands.has_permissions(manage_messages = True)
 async def clear(ctx,amount=2):
-    await ctx.channel.purge(limit = amount)
+    await ctx.channel.purge(limit = amount + 1)
     await ctx.send(f"Kitöröltem {amount} üzenetet!")
-    await asyncio.sleep(2)
+    await asyncio.sleep(0.5)
     await ctx.channel.purge(limit = 1)
 
 @client.command()
