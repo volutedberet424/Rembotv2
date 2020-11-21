@@ -390,7 +390,7 @@ async def clear(ctx,amount=2):
     await ctx.channel.purge(limit = amount + 1)
     slowm = await ctx.send(f"Kitöröltem {amount} üzenetet!")
     await asyncio.sleep(0.5)
-    await client.delete_message(slowm)
+    await client.delete_message(message)
 
 @client.command()
 @commands.has_permissions(kick_members = True)
