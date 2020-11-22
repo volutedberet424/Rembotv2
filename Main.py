@@ -373,7 +373,7 @@ async def pp(ctx, user: discord.Member = None):
         user = ctx.author
     
     ppoutput = random.choice(pps)
-    await ctx.send(f"{user} pp je: {ppoutput}")
+    await ctx.send(f"{user.mention} pp je: {ppoutput}")
 
 @client.command()
 async def development(ctx):
