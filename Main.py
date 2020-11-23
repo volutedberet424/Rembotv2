@@ -371,6 +371,13 @@ async def animeajánlás(ctx):
 async def pp(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
+
+    ppoutput = random.choice(pps)    
+    ppembed = discord.Embed(title = "PP méret meghatározó", description = "", color = discord.Colour.green())
+    ppembed.add_field(name = "PP méret:", value = f"{user.mention} pp je: {ppoutput}", inline = True)
+    ppembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=ppembed)
+    
     
     ppoutput = random.choice(pps)
     await ctx.send(f"{user.mention} pp je: {ppoutput}")
