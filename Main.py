@@ -338,15 +338,22 @@ async def servercount(ctx):
 async def howsimp(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
-    
-    await ctx.send(f"{user.mention} az {random.randint(0,100)}% ban simp!")
+      
+    simpembed = discord.Embed(title = "Simp mérő", description = "", color = discord.Colour.green())
+    simpembed.add_field(name = f"{user.mention} az {random.randint(0,100)}% ban simp!" , inline = True)
+    simpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=simpembed)
          
 @client.command()
 async def howgay(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
     
-    await ctx.send(f"{user.mention} az {random.randint(0,100)}% ban meleg!")
+    gayembed = discord.Embed(title = "Melegség mérő", description = "", color = discord.Colour.green())
+    gayembed.add_field(name = f"{user.mention} az {random.randint(0,100)}% ban meleg!" , inline = True)
+    gayembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=gayembed)
+
  
 
 @client.command()
@@ -377,11 +384,6 @@ async def pp(ctx, user: discord.Member = None):
     ppembed.add_field(name = "PP méret:", value = f"{user.mention} pp je: {ppoutput}", inline = True)
     ppembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=ppembed)
-    
-    
-    ppoutput = random.choice(pps)
-    await ctx.send(f"{user.mention} pp je: {ppoutput}")
-
 @client.command()
 async def development(ctx):
     await ctx.send("A botot fejleszteni egy kis időbe telik, mivel jelenleg egyedül dolgozom a projecten. Amennyiben segiteni szeretnél a bot fejlesztésében, és ismered a pythont mint programozási nyelvet, akkor keresd meg a bot fejlesztőjét (Volutedberet#1663)!")
