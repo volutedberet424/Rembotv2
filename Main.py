@@ -340,7 +340,7 @@ async def howsimp(ctx, user: discord.Member = None):
         user = ctx.author
       
     simpembed = discord.Embed(title = "Simp mérő", description = "", color = discord.Colour.green())
-    simpembed.add_field(name = "Simpség", value = f"{user.mention} az {random.randint(0,100)}% ban simp!" , inline = True)
+    simpembed.add_field(name = "Simpség", value = f"{user.mention} az {random.randint(0,100)}% ban simp! 😞" , inline = True)
     simpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=simpembed)
          
@@ -350,7 +350,7 @@ async def howgay(ctx, user: discord.Member = None):
         user = ctx.author
     
     gayembed = discord.Embed(title = "Melegség mérő", description = "", color = discord.Colour.green())
-    gayembed.add_field(name = f"Melegség:", value = f"{user.mention} az {random.randint(0,100)}% ban meleg!", inline = True)
+    gayembed.add_field(name = f"Melegség:", value = f"{user.mention} az {random.randint(0,100)}% ban meleg! 🏳️‍🌈", inline = True)
     gayembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=gayembed)
 
@@ -381,7 +381,7 @@ async def pp(ctx, user: discord.Member = None):
 
     ppoutput = random.choice(pps)    
     ppembed = discord.Embed(title = "PP méret meghatározó", description = "", color = discord.Colour.green())
-    ppembed.add_field(name = "PP méret:", value = f"{user.mention} pp je: {ppoutput}", inline = True)
+    ppembed.add_field(name = "PP méret:", value = f"{user.mention} pp je: {ppoutput} 😏", inline = True)
     ppembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=ppembed)
 @client.command()
