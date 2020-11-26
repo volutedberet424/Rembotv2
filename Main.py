@@ -132,6 +132,16 @@ async def hornyjail(ctx, user: discord.Member = None):
 
     await ctx.send(file = discord.File("bonk.png"))
 
+@client.command()
+async def deepfry(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+
+
+    asset = user.avatar_url_as(size = 128)
+    img = Image.open(asset)
+    img = await deeppyer.deepfry(img)
+    img.save('deepfry.jpg')
 
 
 
