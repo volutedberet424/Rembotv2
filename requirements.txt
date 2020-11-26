@@ -1,4 +1,3 @@
 discord.py==1.5.0
 Pillow
 dblpy
-deeppyer
