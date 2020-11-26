@@ -4,6 +4,7 @@ import asyncio
 import os
 import json 
 import dbl
+import deeppyer
 from discord.ext import commands
 from PIL import Image
 from io import BytesIO
