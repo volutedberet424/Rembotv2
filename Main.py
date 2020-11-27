@@ -147,7 +147,7 @@ async def avatar(ctx, member: discord.Member = None):
     if member == None:
         member = ctx.author
 
-    pfpfembed = discord.Embed(title = f"{member.name} Profilképe", description = f"{member.mention}", color = discord.Colour.blue())
+    pfpembed = discord.Embed(title = f"{member.name} Profilképe", description = f"{member.mention}", color = discord.Colour.blue())
     pfpembed.set_image(url = member.avatar_url)
     pfpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=pfpembed)
