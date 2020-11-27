@@ -4,12 +4,58 @@ import asyncio
 import os
 import json 
 import dbl
-from discord.ext import commands
+from discord.ext import commands, tasks
 from PIL import Image
 from io import BytesIO
-from discord import VoiceClient
+from discord.voice_client import VoiceClient
 from random import seed
 from random import randint
+from random import choice
+
+
+youtube_dl.utils.bug_reports_message = lambda: ''
+
+ytdl_format_options = {
+    'format': 'bestaudio/best',
+    'outtmpl': '%(extractor)s-%(id)s-%(title)s.%(ext)s',
+    'restrictfilenames': True,
+    'noplaylist': True,
+    'nocheckcertificate': True,
+    'ignoreerrors': False,
+    'logtostderr': False,
+    'quiet': True,
+    'no_warnings': True,
+    'default_search': 'auto',
+    'source_address': '0.0.0.0' 
+}
+
+ffmpeg_options = {
+    'options': '-vn'
+}
+
+ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
+
+class YTDLSource(discord.PCMVolumeTransformer):
+    def __init__(self, source, *, data, volume=0.5):
+        super().__init__(source, volume)
+
+        self.data = data
+
+        self.title = data.get('title')
+        self.url = data.get('url')
+
+    @classmethod
+    async def from_url(cls, url, *, loop=None, stream=False):
+        loop = loop or asyncio.get_event_loop()
+        data = await loop.run_in_executor(None, lambda: ytdl.extract_info(url, download=not stream))
+
+        if 'entries' in data:
+            # take first item from a playlist
+            data = data['entries'][0]
+
+        filename = data['url'] if stream else ytdl.prepare_filename(data)
+        return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
+
 
 
 client = commands.Bot(command_prefix = "r!")
@@ -19,6 +65,8 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 , "Shokugeki no Souma(Foodwars!)", "Shokugeki no Souma(Foodwars!) S2", "Shokugeki no Souma(Foodwars!) S3", "Shokugeki no Souma(Foodwars!) S4", "Shokugeki no Souma(Foodwars!) S5", "Attack on titan", "Attack on titan S2", "Attack on titan S3"]
 
 pps = ["8D", "8=D", "8==D", "8===D", "8D", "8=D", "8==D", "8===D", "8====D", "8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D", "8========D", "8========D", "8=========D", "8==========D", "8===========D", "8=======================================================D"]
+
+queue = []
 
 
 class TopGG(commands.Cog):
@@ -93,6 +141,17 @@ async def userinfo(ctx, member: discord.Member = None):
     await ctx.send(embed=uiembed)
 
 
+
+@client.command()
+async def join(ctx):
+    if not ctx.message.author.voice:
+        await ctx.send("Jelenleg nem vagy egy voice csatornában!")
+        return
+    
+    else:
+        channel = ctx.message.author.voice.channel
+
+    await channel.connect()
 
 
 @client.command()
