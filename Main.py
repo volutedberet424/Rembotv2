@@ -217,8 +217,8 @@ async def gay(ctx, user: discord.Member = None):
     data = BytesIO(await asset.read())
     pfp = Image.open(data)    
     pfp = pfp.resize((300, 300))
-    gtemplate = Image.open("rainbow.png")
-    gtemplate.putalpha(128)
+    g1template = Image.open("rainbow.png")
+    g1template.putalpha(128)
 
 
     gtemplate.paste(pfp, (950, 440))
