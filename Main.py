@@ -6,7 +6,7 @@ import json
 import dbl
 import youtube_dl
 from discord.ext import commands, tasks
-from PIL import Image
+from PIL import Image, ImageEnhance
 from io import BytesIO
 from discord.voice_client import VoiceClient
 from random import seed
