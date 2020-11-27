@@ -105,6 +105,7 @@ async def on_ready():
     print("# Rembot by: volutedberet #")
     print("#                         #")
     print("###########################")
+    setup()
     client.loop.create_task(status_task())
 
         
