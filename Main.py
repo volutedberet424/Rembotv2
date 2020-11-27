@@ -4,6 +4,7 @@ import asyncio
 import os
 import json 
 import dbl
+import youtube_dl
 from discord.ext import commands, tasks
 from PIL import Image
 from io import BytesIO
