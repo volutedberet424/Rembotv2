@@ -219,7 +219,7 @@ async def gay(ctx, user: discord.Member = None):
     pfp = pfp.resize((300, 300))
     g1template = Image.open("rainbow.png")
     g1template = g1template.resize((300, 300))
-    g1template.putalpha(64)
+    g1template.putalpha(0.5)
 
 
     gtemplate.paste(pfp, (950, 440))
