@@ -154,6 +154,11 @@ async def join(ctx):
 
     await channel.connect()
 
+@client.command()
+async def leave(ctx):
+    voice_client = ctx.message.guild.voice_client
+    await voice_client.disconnect()
+
 
 @client.command()
 async def makerem(ctx, user: discord.Member = None):
