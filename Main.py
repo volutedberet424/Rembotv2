@@ -153,12 +153,13 @@ async def join(ctx):
         channel = ctx.message.author.voice.channel
 
     await channel.connect()
+    await ctx.send(f"Beléptem a {channel} be!")
 
 @client.command()
 async def leave(ctx):
     voice_client = ctx.message.guild.voice_client
     await voice_client.disconnect()
-
+    await ctx.send(f"Kiléptem voicerol!")
 
 @client.command()
 async def makerem(ctx, user: discord.Member = None):
