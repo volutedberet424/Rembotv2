@@ -218,14 +218,15 @@ async def gay(ctx, user: discord.Member = None):
     pfp = Image.open(data)    
     pfp = pfp.resize((300, 300))
     g1template = Image.open("rainbow.png")
-    g1template.putalpha(128)
+    g1template.putalpha(64)
 
 
     gtemplate.paste(pfp, (950, 440))
+    gtemplate.paste(g1template, (950, 440))
 
-    gtemplate.save("bonk.png")
+    gtemplate.save("gay.png")
 
-    await ctx.send(file = discord.File("bonk.png"))
+    await ctx.send(file = discord.File("gay.png"))
 
 
 
