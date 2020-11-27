@@ -206,6 +206,29 @@ async def hornyjail(ctx, user: discord.Member = None):
     await ctx.send(file = discord.File("bonk.png"))
 
 
+@client.command()
+async def gay(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+
+
+    gtemplate = Image.open("blank.png")
+    asset = user.avatar_url_as(size = 128)
+    data = BytesIO(await asset.read())
+    pfp = Image.open(data)    
+    pfp = pfp.resize((300, 300))
+    gtemplate = Image.open("rainbow.png")
+    gtemplate.putalpha(128)
+
+
+    gtemplate.paste(pfp, (950, 440))
+
+    gtemplate.save("bonk.png")
+
+    await ctx.send(file = discord.File("bonk.png"))
+
+
+
 
 
 @client.command()
