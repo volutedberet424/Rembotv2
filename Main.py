@@ -66,7 +66,7 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 , "Shokugeki no Souma(Foodwars!)", "Shokugeki no Souma(Foodwars!) S2", "Shokugeki no Souma(Foodwars!) S3", "Shokugeki no Souma(Foodwars!) S4", "Shokugeki no Souma(Foodwars!) S5", "Attack on titan", "Attack on titan S2", "Attack on titan S3"]
 
 pps = ["8D", "8=D", "8==D", "8===D", "8D", "8=D", "8==D", "8===D", "8====D", "8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D", "8========D", "8========D", "8=========D", "8==========D", "8===========D", "8=======================================================D" , "Úristen! Ez akkora hogy ki sem tudom írni..."]
-
+fights = ["kiütötte", "(e)t kiütötte", "megfejelte", "(e)t megfejelte", "leütötte", "(e)t leütötte"]
 queue = []
 
 
@@ -467,11 +467,11 @@ async def howgay(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 43", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 44", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(2)", value = "ping, servercount", inline = True)
     embed.add_field(name = "Alap parancsok(12)", value = "twitter, info, vote, uwu, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok(5)", value = "votegay, howsimp, howgay, pp, epikgamerrate", inline = True)
+    embed.add_field(name = "Funolós parancsok(6)", value = "votegay, howsimp, howgay, pp, epikgamerrate, fight", inline = True)
     embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
     embed.add_field(name = "Roleplay(12)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
@@ -493,6 +493,19 @@ async def pp(ctx, user: discord.Member = None):
     ppembed.add_field(name = "PP méret:", value = f"{user.mention} pp je: {ppoutput} 😏", inline = True)
     ppembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=ppembed)
+
+
+@client.command()
+async def fight(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+
+    fightoutput = random.choice(fights)    
+    fightembed = discord.Embed(title = "Harctér", description = "", color = discord.Colour.green())
+    fightembed.add_field(name = "harc:", value = f"{ctx.author.mention} {fightoutput} {user}", inline = True)
+    fightembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=fightembed)
+
 @client.command()
 async def development(ctx):
     await ctx.send("A botot fejleszteni egy kis időbe telik, mivel jelenleg egyedül dolgozom a projecten. Amennyiben segiteni szeretnél a bot fejlesztésében, és ismered a pythont mint programozási nyelvet, akkor keresd meg a bot fejlesztőjét (Volutedberet#1663)!")
