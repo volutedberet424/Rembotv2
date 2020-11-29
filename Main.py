@@ -66,7 +66,7 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 , "Shokugeki no Souma(Foodwars!)", "Shokugeki no Souma(Foodwars!) S2", "Shokugeki no Souma(Foodwars!) S3", "Shokugeki no Souma(Foodwars!) S4", "Shokugeki no Souma(Foodwars!) S5", "Attack on titan", "Attack on titan S2", "Attack on titan S3"]
 
 pps = ["8D", "8=D", "8==D", "8===D", "8D", "8=D", "8==D", "8===D", "8====D", "8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D", "8========D", "8========D", "8=========D", "8==========D", "8===========D", "8=======================================================D" , "Úristen! Ez akkora hogy ki sem tudom írni..."]
-fights = ["{ctx.author.mention} leütötte {user.mention} (e)t","{user.mention} leütötte {ctx.author.mention} (e)t","{ctx.author.mention} megfejelte {user.mention} (e)t","{user.mention} megfejelte {ctx.author.mention} (e)t","{ctx.author.mention} megverte {user.mention} (e)t","{user.mention} megverte {ctx.author.mention} (e)t","{ctx.author.mention} szétverte {user.mention} (e)t","{user.mention} szétverte {ctx.author.mention} (e)t",]
+fights = [f"{ctx.author.mention} leütötte {user.mention} (e)t",f"{user.mention} leütötte {ctx.author.mention} (e)t",f"{ctx.author.mention} megfejelte {user.mention} (e)t",f"{user.mention} megfejelte {ctx.author.mention} (e)t",f"{ctx.author.mention} megverte {user.mention} (e)t",f"{user.mention} megverte {ctx.author.mention} (e)t",f"{ctx.author.mention} szétverte {user.mention} (e)t",f"{user.mention} szétverte {ctx.author.mention} (e)t",]
 queue = []
 
 
