@@ -502,7 +502,7 @@ async def fight(ctx, user: discord.Member = None):
 
     fightoutput = random.choice(fights)    
     fightembed = discord.Embed(title = "Harctér", description = "", color = discord.Colour.green())
-    fightembed.add_field(name = "harc:", value = f"{ctx.author.mention} {fightoutput} {user}", inline = True)
+    fightembed.add_field(name = "harc:", value = f"{ctx.author.mention} {fightoutput} {user.mention}", inline = True)
     fightembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=fightembed)
 
