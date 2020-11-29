@@ -66,7 +66,7 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 , "Shokugeki no Souma(Foodwars!)", "Shokugeki no Souma(Foodwars!) S2", "Shokugeki no Souma(Foodwars!) S3", "Shokugeki no Souma(Foodwars!) S4", "Shokugeki no Souma(Foodwars!) S5", "Attack on titan", "Attack on titan S2", "Attack on titan S3"]
 
 pps = ["8D", "8=D", "8==D", "8===D", "8D", "8=D", "8==D", "8===D", "8====D", "8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D", "8========D", "8========D", "8=========D", "8==========D", "8===========D", "8=======================================================D" , "Úristen! Ez akkora hogy ki sem tudom írni..."]
-fights = ["kiütötte", "(e)t kiütötte", "megfejelte", "(e)t megfejelte", "leütötte", "(e)t leütötte"]
+fights = ["{ctx.author.mention} leütötte {user.mention} (e)t","{user.mention} leütötte {ctx.author.mention} (e)t","{ctx.author.mention} megfejelte {user.mention} (e)t","{user.mention} megfejelte {ctx.author.mention} (e)t","{ctx.author.mention} megverte {user.mention} (e)t","{user.mention} megverte {ctx.author.mention} (e)t","{ctx.author.mention} szétverte {user.mention} (e)t","{user.mention} szétverte {ctx.author.mention} (e)t",]
 queue = []
 
 
@@ -502,7 +502,7 @@ async def fight(ctx, user: discord.Member = None):
 
     fightoutput = random.choice(fights)    
     fightembed = discord.Embed(title = "Harctér", description = "", color = discord.Colour.green())
-    fightembed.add_field(name = "harc:", value = f"{ctx.author.mention} {fightoutput} {user.mention}", inline = True)
+    fightembed.add_field(name = "harc:", value = f"{fightoutput}", inline = True)
     fightembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=fightembed)
 
