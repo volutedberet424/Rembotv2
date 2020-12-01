@@ -662,7 +662,7 @@ async def blush(ctx):
 
 
 @client.event
-async def on_command_error(ctx):
+async def on_command_error(error, ctx):
     await ctx.send("Ez a parancs nem létezik!")
 
 #client run function, token herokun belül van setupolva
