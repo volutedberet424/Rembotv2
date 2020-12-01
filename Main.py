@@ -221,9 +221,9 @@ async def gay(ctx, user: discord.Member = None):
 
     pfp.paste(g1template, (950, 440))
 
-    gtemplate.save("gayedit.png")
+    gtemplate.save("gayedit.jpg")
 
-    await ctx.send(file = discord.File("gayedit.png"))
+    await ctx.send(file = discord.File("gayedit.jpg"))
 
 
 
@@ -440,6 +440,16 @@ async def howsimp(ctx, user: discord.Member = None):
     await ctx.send(embed=simpembed)
 
 @client.command()
+async def howfat(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+      
+    simpembed = discord.Embed(title = "Zsír mérő", description = "", color = discord.Colour.green())
+    simpembed.add_field(name = "Dagadtság:", value = f"{user.mention} az {random.randint(0,100)}% ban dagadt! 🍔" , inline = True)
+    simpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=simpembed)
+
+@client.command()
 async def epikgamerrate(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
@@ -472,11 +482,11 @@ async def howcringe(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 46", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 47", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(2)", value = "ping, servercount", inline = True)
     embed.add_field(name = "Alap parancsok(13)", value = "twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok(7)", value = "votegay, howsimp, howgay, howcringe, pp, epikgamerrate, fight", inline = True)
+    embed.add_field(name = "Funolós parancsok(8)", value = "votegay, howsimp, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
     embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
     embed.add_field(name = "Roleplay(12)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
