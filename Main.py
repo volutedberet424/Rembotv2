@@ -462,15 +462,24 @@ async def howgay(ctx, user: discord.Member = None):
     gayembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=gayembed)
 
+@client.command()
+async def howcringe(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+    
+    cringeembed = discord.Embed(title = "Cringe mérő", description = "", color = discord.Colour.green())
+    cringeembed.add_field(name = f"Cringeség:", value = f"{user.mention} az {random.randint(0,100)}% ban cringe! 🤮", inline = True)
+    cringeembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=cringeembed)
  
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 45", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 46", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(2)", value = "ping, servercount", inline = True)
     embed.add_field(name = "Alap parancsok(13)", value = "twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok(6)", value = "votegay, howsimp, howgay, pp, epikgamerrate, fight", inline = True)
+    embed.add_field(name = "Funolós parancsok(7)", value = "votegay, howsimp, howgay, howcringe, pp, epikgamerrate, fight", inline = True)
     embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
     embed.add_field(name = "Roleplay(12)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
