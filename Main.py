@@ -466,9 +466,9 @@ async def howgay(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 44", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 45", color = discord.Colour.green())
     embed.add_field(name = "Teszt parancsok(2)", value = "ping, servercount", inline = True)
-    embed.add_field(name = "Alap parancsok(12)", value = "twitter, info, vote, uwu, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
+    embed.add_field(name = "Alap parancsok(13)", value = "twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
     embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
     embed.add_field(name = "Funolós parancsok(6)", value = "votegay, howsimp, howgay, pp, epikgamerrate, fight", inline = True)
     embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
@@ -512,6 +512,10 @@ async def development(ctx):
 @client.command()
 async def uwu(ctx):
     await ctx.send(f"{ctx.author.mention} UwU! :3")
+
+@client.command()
+async def owo(ctx):
+    await ctx.send(f"{ctx.author.mention} OwO! (⋋▂⋌)")
 
 
 @client.command()
