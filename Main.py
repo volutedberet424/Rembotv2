@@ -210,8 +210,6 @@ async def gay(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
 
-
-    gtemplate = Image.open("blank.png")
     asset = user.avatar_url_as(size = 128)
     data = BytesIO(await asset.read())
     pfp = Image.open(data)    
@@ -221,12 +219,11 @@ async def gay(ctx, user: discord.Member = None):
     g1template.putalpha(1)
 
 
-    gtemplate.paste(pfp, (950, 440))
-    gtemplate.paste(g1template, (950, 440))
+    pfp.paste(g1template, (950, 440))
 
-    gtemplate.save("gay.png")
+    gtemplate.save("gayedit.png")
 
-    await ctx.send(file = discord.File("gay.png"))
+    await ctx.send(file = discord.File("gayedit.png"))
 
 
 
