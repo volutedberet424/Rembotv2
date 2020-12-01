@@ -659,5 +659,11 @@ async def blush(ctx):
     blembed.set_image(url="https://i.pinimg.com/originals/ac/2f/1f/ac2f1f727d4d96a6a7c4fb5ae5a41cf0.gif")
     await ctx.send(embed=blembed)
 
+
+
+@client.event
+async def on_command_error(ctx):
+    await ctx.send("Ez a parancs nem létezik!")
+
 #client run function, token herokun belül van setupolva
 client.run(os.environ['token'])
