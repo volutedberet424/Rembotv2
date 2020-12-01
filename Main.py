@@ -660,6 +660,11 @@ async def blush(ctx):
     await ctx.send(embed=blembed)
 
 
+@client.event
+async def on_message(messagea):
+    print(messagea)
+
+
 
 @client.event
 async def on_command_error(error, ctx):
