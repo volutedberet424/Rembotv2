@@ -162,7 +162,12 @@ async def cica(ctx):
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Ez a parancs nem létezik! ＾_＾")
+        await ctx.send("Ez a parancs nem létezik! ＾_＾"),
+
+@client.event
+async def on_message(message, ctx):
+    if client.user.mentioned_in(message):
+        await ctx.send("A prefixem az a r!, amennyiben érdekel hogy mit tudok használd az r!parancsok at.")
 
 @client.command()
 async def join(ctx):
