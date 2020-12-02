@@ -776,10 +776,6 @@ async def blush(ctx):
 
 
 
-@client.event
-async def on_command_error(error, ctx):
-    await ctx.send("Ez a parancs nem létezik!")
-
 
 ##ekonómia rendszer
 
