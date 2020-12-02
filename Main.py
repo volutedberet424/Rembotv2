@@ -159,6 +159,10 @@ async def cica(ctx):
     data = response.json()
     await message.channel.send(data['file'])
 
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send("Ez a parancs nem létezik! （＾_＾")
 
 @client.command()
 async def join(ctx):
