@@ -623,18 +623,21 @@ async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
 @client.command()
 @commands.has_permissions(manage_messages = True)
 async def slowmode(ctx, seconds: int):
+    await ctx.channel.purge(limit = 1)
     await ctx.channel.edit(slowmode_delay=seconds)
     await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre! ⌛")
 
 @client.command()
 @commands.has_permissions(manage_messages = True)
 async def sm(ctx, seconds: int):
+    await ctx.channel.purge(limit = 1)
     await ctx.channel.edit(slowmode_delay=seconds)
     await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre! ⌛")
 
 @client.command()
 @commands.has_permissions(manage_messages = True)
 async def slowm(ctx, seconds: int):
+    await ctx.channel.purge(limit = 1)
     await ctx.channel.edit(slowmode_delay=seconds)
     await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre! ⌛")
 
