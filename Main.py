@@ -482,17 +482,67 @@ async def howcringe(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancsok", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 47", color = discord.Colour.green())
-    embed.add_field(name = "Teszt parancsok(2)", value = "ping, servercount", inline = True)
-    embed.add_field(name = "Alap parancsok(13)", value = "twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
-    embed.add_field(name = "Moderátor parancsok(5)", value = "clear, kick, ban, slowmode, userinfo", inline = True)
-    embed.add_field(name = "Funolós parancsok(8)", value = "votegay, howsimp, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
-    embed.add_field(name = "Képes parancsok(5)", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
-    embed.add_field(name = "Animés parancsok(2)", value = "animeajánlás, watchanime(Animékhez hyperlinkeket biztosít)", inline = True)
-    embed.add_field(name = "Roleplay(12)", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
+    embed = discord.Embed(title = "Parancslista", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 47", color = discord.Colour.green())
+    embed.add_field(name = "Teszt", value = "```r!teszt```", inline = True)
+    embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
+    embed.add_field(name = "Moderálás", value = "```r!moderator```", inline = True)
+    embed.add_field(name = "Fun", value = "```r!fun```", inline = True)
+    embed.add_field(name = "Képmanipulálás", value = "```r!képmanipulálás```", inline = True)
+    embed.add_field(name = "Anime", value = "```r!anime```", inline = True)
+    embed.add_field(name = "Roleplay", value = "```r!roleplay```", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
+@client.command()
+async def fun(ctx):
+    funembed = discord.Embed(title = "Fun parancsok", description = "", color = discord.Colour.green())
+    funembed.add_field(name = "Jelenlegi parancsok száma: 8", value = "votegay, howsimp, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
+    funembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=funembed)
+
+@client.command()
+async def teszt(ctx):
+    tesztembed = discord.Embed(title = "Teszt parancsok", description = "", color = discord.Colour.green())
+    tesztembed.add_field(name = "Jelenlegi parancsok száma: 2", value = "ping, servercount", inline = True)
+    tesztembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=tesztembed)
+
+@client.command()
+async def moderator(ctx):
+    modembed = discord.Embed(title = "Moderátor parancsok", description = "", color = discord.Colour.green())
+    modembed.add_field(name = "Jelenlegi parancsok száma: 5", value = "clear, kick, ban, slowmode, userinfo", inline = True)
+    modembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=modembed)
+
+@client.command()
+async def képmanipulálás(ctx):
+    imgembed = discord.Embed(title = "képmanipulálós parancsok", description = "", color = discord.Colour.green())
+    imgembed.add_field(name = "Jelenlegi parancsok száma: 5", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
+    imgembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=imgembed)
+
+@client.command()
+async def roleplay(ctx):
+    rpembed = discord.Embed(title = "Szerepjáték parancsok", description = "", color = discord.Colour.green())
+    rpembed.add_field(name = "Jelenlegi parancsok száma: 12", value = "hug, kiss, headpat, cry, laugh, laughat, shoot, bite, slap, smack, blush, profil(Nincs még kész)", inline = True)
+    rpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=rpembed)
+
+@client.command()
+async def anime(ctx):
+    animeembed = discord.Embed(title = "Animés parancsok", description = "", color = discord.Colour.green())
+    animeembed.add_field(name = "Jelenlegi parancsok száma: 2", value = "animeajánlás, watchanime", inline = True)
+    animeembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=animeembed)
+
+@client.command()
+async def alap(ctx):
+    mainembed = discord.Embed(title = "Alap parancsok", description = "", color = discord.Colour.green())
+    mainembed.add_field(name = "Jelenlegi parancsok száma: 13", value = "twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
+    mainembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=mainembed)
+
+ 
 @client.command()
 async def animeajánlás(ctx):
     animeoutput = random.choice(animes)
