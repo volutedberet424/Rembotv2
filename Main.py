@@ -481,8 +481,18 @@ async def howcringe(ctx, user: discord.Member = None):
  
 
 @client.command()
+async def rankthot(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+    
+    cringeembed = discord.Embed(title = "Ribancság mérő", description = "", color = discord.Colour.green())
+    cringeembed.add_field(name = f"Ribancság:", value = f"{user.mention} az {random.randint(0,100)}% ban egy ribanc! 😏", inline = True)
+    cringeembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=cringeembed)
+
+@client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancslista", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 49", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancslista", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 50", color = discord.Colour.green())
     embed.add_field(name = "Teszt", value = "```r!teszt```", inline = True)
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás", value = "```r!moderator```", inline = True)
@@ -497,7 +507,7 @@ async def parancsok(ctx):
 @client.command()
 async def fun(ctx):
     funembed = discord.Embed(title = "Fun parancsok", description = "", color = discord.Colour.green())
-    funembed.add_field(name = "Jelenlegi parancsok száma: 8", value = "votegay, howsimp, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
+    funembed.add_field(name = "Jelenlegi parancsok száma: 9", value = "votegay, howsimp, rankthot, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
     funembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=funembed)
 
