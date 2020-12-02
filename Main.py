@@ -489,6 +489,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Fun", value = "```r!fun```", inline = True)
     embed.add_field(name = "Képmanipulálás", value = "```r!képmanipulálás```", inline = True)
     embed.add_field(name = "Anime", value = "```r!anime```", inline = True)
+    embed.add_field(name = "Zene", value = "```r!zene```", inline = True)
     embed.add_field(name = "Roleplay", value = "```r!roleplay```", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
@@ -499,6 +500,13 @@ async def fun(ctx):
     funembed.add_field(name = "Jelenlegi parancsok száma: 8", value = "votegay, howsimp, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
     funembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=funembed)
+
+@client.command()
+async def zene(ctx):
+    musembed = discord.Embed(title = "Zenés parancsok", description = "Jelenleg még készül maga a zenejátszás!", color = discord.Colour.green())
+    musembed.add_field(name = "Jelenlegi parancsok száma: 2", value = "join, leave", inline = True)
+    musembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=musembed)
 
 @client.command()
 async def teszt(ctx):
