@@ -162,7 +162,7 @@ async def cica(ctx):
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Ez a parancs nem létezik! （＾_＾")
+        await ctx.send("Ez a parancs nem létezik! ＾_＾")
 
 @client.command()
 async def join(ctx):
