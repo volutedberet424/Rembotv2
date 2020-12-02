@@ -160,13 +160,6 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Ez a parancs nem létezik! ＾_＾"),
 
-@client.event
-async def on_message(message):
-    mention = f'<@!{753645694799183963}>'
-    if mention in message.content:
-        await message.channel.send("Hali! A prefixem az a r! További infókért használd a r!info parancsot!")
-
-
 @client.command()
 async def join(ctx):
     if not ctx.message.author.voice:
