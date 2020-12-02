@@ -510,7 +510,7 @@ async def teszt(ctx):
 @client.command()
 async def moderator(ctx):
     modembed = discord.Embed(title = "Moderátor parancsok", description = "", color = discord.Colour.green())
-    modembed.add_field(name = "Jelenlegi parancsok száma: 5", value = "clear, kick, ban, slowmode, userinfo", inline = True)
+    modembed.add_field(name = "Jelenlegi parancsok száma: 5", value = "clear, kick, ban, slowmode/sm/slowm, userinfo", inline = True)
     modembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=modembed)
 
@@ -616,8 +616,19 @@ async def ban(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
 @commands.has_permissions(manage_messages = True)
 async def slowmode(ctx, seconds: int):
     await ctx.channel.edit(slowmode_delay=seconds)
-    await ctx.send(f"Erre a csatornára slowmode lett rakva **{seconds}** másodpercre!")
+    await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre!")
 
+@client.command()
+@commands.has_permissions(manage_messages = True)
+async def sm(ctx, seconds: int):
+    await ctx.channel.edit(slowmode_delay=seconds)
+    await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre!")
+
+@client.command()
+@commands.has_permissions(manage_messages = True)
+async def slowm(ctx, seconds: int):
+    await ctx.channel.edit(slowmode_delay=seconds)
+    await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre!")
 
 
 @client.command()
