@@ -168,7 +168,7 @@ async def on_command_error(ctx, error):
 async def on_message(message):
     mention = f'<@!{753645694799183963}>'
     if mention in message.content:
-        await message.channel.send("Hali! A prefixem az a r! További infókért használd az r!info parancsot!")
+        await message.channel.send("Hali! A prefixem az a r! További infókért használd az r!info parancsot!!")
 
 
 @client.command()
@@ -462,11 +462,7 @@ async def howsimp(ctx, user: discord.Member = None):
 async def howfat(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
-
-    if user == f'<@!{472212147586203659}>':
-        await ctx.send("Misi az nagyon dagadt lmaoooo")
-    else:    
-
+      
     simpembed = discord.Embed(title = "Zsír mérő", description = "", color = discord.Colour.green())
     simpembed.add_field(name = "Dagadtság:", value = f"{user.mention} az {random.randint(0,100)}% ban dagadt! 🍔" , inline = True)
     simpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
