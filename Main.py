@@ -168,7 +168,7 @@ async def on_command_error(ctx, error):
 async def on_message(message):
     mention = f'<@!{753645694799183963}>'
     if mention in message.content:
-        await message.channel.send("Hali! A prefixem az a r!.")
+        await message.channel.send("Hali! A prefixem az a r! További infókért használd az r!info parancsot!")
 
 
 @client.command()
