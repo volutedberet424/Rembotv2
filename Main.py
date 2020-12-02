@@ -165,9 +165,11 @@ async def on_command_error(ctx, error):
         await ctx.send("Ez a parancs nem létezik! ＾_＾"),
 
 @client.event
-async def on_message(ctx, message):
-    if client.user.mentioned_in(message):
-        await ctx.send("A prefixem az a r!, amennyiben érdekel hogy mit tudok használd az r!parancsok at.")
+async def on_message(message):
+    mention = f'<@!{bot.user.id}>'
+    if mention in message.content:
+        await message.channel.send("Hali! A prefixem az a r!.")
+
 
 @client.command()
 async def join(ctx):
