@@ -5,6 +5,7 @@ import os
 import json 
 import dbl
 import youtube_dl
+import requests
 from discord.ext import commands, tasks
 from PIL import Image, ImageEnhance
 from io import BytesIO
@@ -150,6 +151,13 @@ async def avatar(ctx, member: discord.Member = None):
     pfpembed.set_image(url = member.avatar_url)
     pfpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=pfpembed)
+
+
+@client.command()
+async def cica(ctx):
+    response = requests.get('https://aws.random.cat/meow')
+    data = response.json()
+    await message.channel.send(data['file'])
 
 
 @client.command()

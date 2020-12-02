@@ -3,3 +3,4 @@ Pillow
 dblpy
 youtube_dl
 PyNaCl
+requests
