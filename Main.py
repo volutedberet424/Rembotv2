@@ -166,7 +166,7 @@ async def on_command_error(ctx, error):
 
 @client.event
 async def on_message(message):
-    mention = f'<@!{bot.user.id}>'
+    mention = f'<@!{753645694799183963}>'
     if mention in message.content:
         await message.channel.send("Hali! A prefixem az a r!.")
 
