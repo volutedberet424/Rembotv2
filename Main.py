@@ -482,7 +482,7 @@ async def howcringe(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancslista", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 47", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancslista", description = "A bot még bétában van tehát még lesznek parancsok. A bot prefixe: r! Jelenlegi parancsok száma: 49", color = discord.Colour.green())
     embed.add_field(name = "Teszt", value = "```r!teszt```", inline = True)
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás", value = "```r!moderator```", inline = True)
