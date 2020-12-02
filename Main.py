@@ -501,6 +501,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Anime", value = "```r!anime```", inline = True)
     embed.add_field(name = "Zene", value = "```r!zene```", inline = True)
     embed.add_field(name = "Roleplay", value = "```r!roleplay```", inline = True)
+    embed.add_field(name = "Ekonómia", value = "```Még készül!!```", inline = True)
     embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=embed)
 
@@ -766,6 +767,26 @@ async def blush(ctx):
 @client.event
 async def on_command_error(error, ctx):
     await ctx.send("Ez a parancs nem létezik!")
+
+
+##ekonómia rendszer
+
+@client.command()
+async def munkák(ctx):
+    worksembed = discord.Embed(title = "Munkák listája", description = "Még bővülni fog!", color = discord.Colour.green())
+    worksembed.add_field(name = "Munkák:", value = "kiszolgáló", inline = True)
+    worksembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=worksembed)
+
+
+
+@client.command()
+async def work(ctx):
+    work1embed = discord.Embed(title = "OwO", description = "", color = discord.Colour.green())
+    work1embed.add_field(name = "Lol", value = "Te erre hogy találtál rá?", inline = True)
+    work1embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=work1embed)
+
 
 #client run function, token herokun belül van setupolva
 client.run(os.environ['token'])
