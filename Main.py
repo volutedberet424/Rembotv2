@@ -153,11 +153,7 @@ async def avatar(ctx, member: discord.Member = None):
     await ctx.send(embed=pfpembed)
 
 
-@client.command()
-async def cica(ctx):
-    response = requests.get('https://aws.random.cat/meow')
-    data = response.json()
-    await message.channel.send(data['file'])
+
 
 @client.event
 async def on_command_error(ctx, error):
@@ -463,10 +459,10 @@ async def howfat(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
       
-    simpembed = discord.Embed(title = "Zsír mérő", description = "", color = discord.Colour.green())
-    simpembed.add_field(name = "Dagadtság:", value = f"{user.mention} az {random.randint(0,100)}% ban dagadt! 🍔" , inline = True)
-    simpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
-    await ctx.send(embed=simpembed)
+    fffembed = discord.Embed(title = "Zsír mérő", description = "", color = discord.Colour.green())
+    fffembed.add_field(name = "Dagadtság:", value = f"{user.mention} az {random.randint(0,100)}% ban dagadt! 🍔" , inline = True)
+    fffembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=fffembed)
 
 @client.command()
 async def epikgamerrate(ctx, user: discord.Member = None):
