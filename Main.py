@@ -485,10 +485,10 @@ async def rankthot(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
     
-    cringeembed = discord.Embed(title = "Ribancság mérő", description = "", color = discord.Colour.green())
-    cringeembed.add_field(name = f"Ribancság:", value = f"{user.mention} az {random.randint(0,100)}% ban egy ribanc! 😏", inline = True)
-    cringeembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
-    await ctx.send(embed=cringeembed)
+    thotembed = discord.Embed(title = "Ribancság mérő", description = "", color = discord.Colour.green())
+    thotembed.add_field(name = f"Ribancság:", value = f"{user.mention} az {random.randint(0,100)}% ban egy ribanc! 😏", inline = True)
+    thotembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=thotembed)
 
 @client.command()
 async def parancsok(ctx):
