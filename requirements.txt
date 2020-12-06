@@ -4,3 +4,4 @@ dblpy
 youtube_dl
 PyNaCl
 requests
+dashcord

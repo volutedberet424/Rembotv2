@@ -6,6 +6,7 @@ import json
 import dbl
 import youtube_dl
 import requests
+import dashcord
 from discord.ext import commands, tasks
 from PIL import Image, ImageEnhance
 from io import BytesIO
