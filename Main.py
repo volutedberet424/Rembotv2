@@ -576,7 +576,7 @@ async def alap(ctx):
 
 @client.command()
 async def sadmisi(ctx):
-    await ctx.send("<:sadmisi:785228858013515776>") 
+    await ctx.send(<:sadmisi:785228858013515776>) 
 
 @client.command()
 async def animeajánlás(ctx):
