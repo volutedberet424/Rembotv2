@@ -570,7 +570,14 @@ async def alap(ctx):
     mainembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=mainembed)
 
- 
+
+
+# <&785228858013515776>
+
+@client.command()
+async def sadmisi(ctx):
+    await ctx.send(<&785228858013515776>) 
+
 @client.command()
 async def animeajánlás(ctx):
     animeoutput = random.choice(animes)
