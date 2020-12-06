@@ -501,7 +501,7 @@ async def rankthot(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancslista", description = "A kategóriákat a parancsokkal érheted el! A bot prefixe: r! Jelenlegi parancsok száma: 50", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancslista", description = "A kategóriákat a parancsokkal érheted el! A bot prefixe: r! Jelenlegi parancsok száma: 51", color = discord.Colour.green())
     embed.add_field(name = "Teszt🧪", value = "```r!teszt```", inline = True)
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás🛂", value = "```r!moderator```", inline = True)
@@ -538,7 +538,7 @@ async def teszt(ctx):
 @client.command()
 async def moderator(ctx):
     modembed = discord.Embed(title = "Moderátor parancsok", description = "", color = discord.Colour.green())
-    modembed.add_field(name = "Jelenlegi parancsok száma: 5", value = "clear, kick, ban, slowmode/sm/slowm, userinfo", inline = True)
+    modembed.add_field(name = "Jelenlegi parancsok száma: 6", value = "clear, kick, ban, slowmode/sm/slowm, userinfo, addrole", inline = True)
     modembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=modembed)
 
@@ -660,6 +660,14 @@ async def slowm(ctx, seconds: int):
     await ctx.channel.purge(limit = 1)
     await ctx.channel.edit(slowmode_delay=seconds)
     await ctx.send(f"Erre a csatornára lassitás lett rakva **{seconds}** másodpercre! ⌛")
+
+
+@client.command()
+@commands.has_permissions(manage_messages = True)
+async def addrole(ctx, rolename):
+    author = ctx.message.author
+    await client.create_role(author.server, name=f"{rolename}")
+    await ctx.send(f"Csináltam egy rangot {rolename} néven!")
 
 
 @client.command()
