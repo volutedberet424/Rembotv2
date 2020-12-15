@@ -631,9 +631,14 @@ async def clear(ctx,amount=2):
 
 @client.command()
 @commands.has_permissions(kick_members = True)
-async def kick(ctx, member : discord.Member,*,indok = "Nincs indok megadva"):
-    await member.kick(reason=indok)
-    await ctx.send(f"{member} Ki lett kickelve a következő ok miatt: ```{indok}```")
+async def kick(ctx, member : discord.Member = None ,*,indok = "Nincs indok megadva"):
+    if member == None:
+        await ctx.send("Hibás parancshasználat! Helyes használat:  ```r!kick 【Felhasználó】 【indok】```")
+        else:
+            await member.kick(reason=indok)
+            await ctx.send(f"{member} Ki lett kickelve a következő ok miatt: ```{indok}```")   
+
+
 
 @client.command()
 @commands.has_permissions(ban_members = True)
