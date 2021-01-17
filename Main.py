@@ -90,7 +90,7 @@ async def status_task():
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name=f"{len(client.guilds)} szerveren van bent! │ r!info"))
         await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game(name="Mehetnek a karácsonyi zenék! │ r!info"))
+        await client.change_presence(activity=discord.Game(name="Nemtom mit írjak ide lol! │ r!info"))
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name="r!parancsok"))
         await asyncio.sleep(10)
@@ -117,6 +117,12 @@ async def on_guild_join(guild):
         if channel.permissions_for(guild.me).send_messages:
             await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! ```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
         break
+
+
+
+@client.command()
+async def updateok(ctx):
+    await ctx.send("Végre egy update több hónap lustaság után: szerverinfo parancs")    
 
 @client.command()
 async def info(ctx):
@@ -153,7 +159,15 @@ async def avatar(ctx, member: discord.Member = None):
     pfpembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=pfpembed)
 
-
+@client.command()
+async def serverinfo(ctx):
+    sinfoembed = discord.Embed(title = f"{ctx.guild.name}", description = f"A szerver tulaja:{ctx.guild.owner}", color = discord.Colour.blue())
+    sinfoembed.add_field(name="Tagok száma:", value=ctx.guild.member_count)
+    sinfoembed.add_field(name="Szerver régiója:", value=ctx.ctx.guild.region)
+    sinfoembed.add_field(name = "ID:", value = ctx.guild.id , inline = True)
+    sinfoembed.set_thumbnail(url = ctx.guild.icon_url)
+    sinfoembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=sinfoembed)
 
 
 @client.event
@@ -305,10 +319,6 @@ async def kézfogás(ctx, user: discord.Member = None):
 
     await ctx.send(file = discord.File("hshakeedit.jpg"))
 
-
-@client.command()
-async def updateok(ctx):
-    await ctx.send("-V0.1.2 Extra animés, képes parancsok, Illetve vote parancs mivel a bot felkerült Top.gg re.    ")
 
 @client.command()
 async def vote(ctx):
