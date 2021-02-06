@@ -115,8 +115,15 @@ async def on_ready():
 async def on_guild_join(guild):
     for channel in guild.text_channels:
         if channel.permissions_for(guild.me).send_messages:
-            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! ```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok``` Support szerver: https://discord.gg/tCFesQjx')
+            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! ```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok``` Support szerver: https://discord.gg/tCFesQjx. Partnereink megtekintéséhez használd az r!partner parancsot')
         break
+
+
+@client.command()
+async def partnerek(ctx):
+    partnerembed = discord.Embed(title = "Szerverek akik hírdetik a botot", description = "A teljes leíráshor is invitehoz használd az adott szerver nevét parancsként!", color = discord.Colour.green())
+    partnerembed.add_field(name = "üres", value = "Jelenleg még nincsenek partnerek", inline = True)
+    await ctx.send(embed=partnerembed)
 
 
 
@@ -511,7 +518,7 @@ async def rankthot(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancslista", description = "A kategóriákat a parancsokkal érheted el! A bot prefixe: r! Jelenlegi parancsok száma: 51", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancslista", description = "A kategóriákat a parancsokkal érheted el! A bot prefixe: r! Jelenlegi parancsok száma: 52", color = discord.Colour.green())
     embed.add_field(name = "Teszt🧪", value = "```r!teszt```", inline = True)
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás🛂", value = "```r!moderator```", inline = True)
@@ -576,7 +583,7 @@ async def anime(ctx):
 @client.command()
 async def alap(ctx):
     mainembed = discord.Embed(title = "Alap parancsok", description = "", color = discord.Colour.green())
-    mainembed.add_field(name = "Jelenlegi parancsok száma: 13", value = "twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
+    mainembed.add_field(name = "Jelenlegi parancsok száma: 13", value = "partner, twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
     mainembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=mainembed)
 
