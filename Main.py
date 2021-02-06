@@ -125,6 +125,7 @@ async def partnerek(ctx):
     partnerembed.add_field(name = "csíkszereda", value = "Egy magyar Discord-szerver mindenkinek! Akármilyen érdeklődési körrel is rendelkezz...", inline = True)
     await ctx.send(embed=partnerembed)
 
+@commands.cooldown(1, 10, commands.BucketType.user)
 @client.command()
 async def csíkszereda(ctx):
     partner1embed = discord.Embed(title = "Csíkszereda", description = "Egy magyar Discord-szerver mindenkinek! Akármilyen érdeklődési körrel is rendelkezz...", color = discord.Colour.green())
@@ -188,7 +189,8 @@ async def serverinfo(ctx):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Ez a parancs nem létezik! ＾_＾ Ha a parancs listázva van és mégsem jó, akkor szólj a tulajnak a support szerveren Invite: https://discord.gg/tCFesQjx"),
-
+    if isinstance(error, commands.CommandOnCooldown):
+        await ctx.send("Várj egy kicsit mielött ezt a parancsot használnád megint!")
 @client.command()
 async def join(ctx):
     if not ctx.message.author.voice:
@@ -362,7 +364,7 @@ async def watchanime(ctx):
     aniembed.add_field(name = "Darling in the franx", value = "r!darling", inline = True)
     await ctx.send(embed=aniembed)
    
-
+@commands.cooldown(1, 10, commands.BucketType.user)
 @client.command()
 async def rezero(ctx):
     reembed = discord.Embed(title = "Re:ZERO Starting Life in Another World", description = "Második évad parancsa: r!rezeros2", color = discord.Colour.blue())
@@ -396,6 +398,7 @@ async def rezero(ctx):
     
     await ctx.send(embed=reembed)
 
+@commands.cooldown(1, 10, commands.BucketType.user)
 @client.command()
 async def rezeros2(ctx):
     re2embed = discord.Embed(title = "Re:ZERO Starting Life in Another World S2", description = "Ez az évad még jelenleg fut tehát új részek kikerülnek ide amikor kijönnek!", color = discord.Colour.blue())
@@ -418,6 +421,8 @@ async def rezeros2(ctx):
     
     await ctx.send(embed=re2embed)    
 
+
+@commands.cooldown(1, 10, commands.BucketType.user)
 @client.command()
 async def darling(ctx):
     darembed = discord.Embed(title = "Darling in the franxx", description = "Sajnos nincs még második évad :(", color = discord.Colour.blue())
