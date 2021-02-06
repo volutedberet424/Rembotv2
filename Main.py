@@ -128,7 +128,7 @@ async def partnerek(ctx):
 @client.command()
 async def csíkszereda(ctx):
     partner1embed = discord.Embed(title = "Csíkszereda", description = "Egy magyar Discord-szerver mindenkinek! Akármilyen érdeklődési körrel is rendelkezz...", color = discord.Colour.green())
-    partner1embed.add_field(name = "Leírás:", value = "Mi is emeli ki a nagy tömegből? » Kedves, befogadó közösség   » Több mint 80 emoji   🔹1-es szintű Nitro Boost   » Sok jól konfigurált bot   » Aktívabb csatornák   » Partnerségi lehetőség   » Valamint segítőkész, kedves, könnyen elérhető vezetőség", inline = True)
+    partner1embed.add_field(name = "Leírás:", value = "Mi is emeli ki a nagy tömegből? » Kedves, befogadó közösség    » Több mint 80 emoji         🔹1-es szintű Nitro Boost   » Sok jól konfigurált bot   » Aktívabb csatornák   » Partnerségi lehetőség   » Valamint segítőkész, kedves, könnyen elérhető vezetőség", inline = True)
     partner1embed.add_field(name = "Invite:", value = "https://discord.gg/e9B5fSWb2E", inline = True)
     partner1embed.set_thumbnail(url = "https://cdn.discordapp.com/icons/611266581435252746/8807efff8b233b9d5da7cf7f3798f81a.webp?size=1024")
     await ctx.send(embed=partner1embed)
