@@ -122,9 +122,14 @@ async def on_guild_join(guild):
 @client.command()
 async def partnerek(ctx):
     partnerembed = discord.Embed(title = "Szerverek akik hírdetik a botot", description = "A teljes leíráshor is invitehoz használd az adott szerver nevét parancsként!", color = discord.Colour.green())
-    partnerembed.add_field(name = "üres", value = "Jelenleg még nincsenek partnerek", inline = True)
+    partnerembed.add_field(name = "csíkszereda", value = "Egy magyar Discord-szerver mindenkinek! Akármilyen érdeklődési körrel is rendelkezz...", inline = True)
     await ctx.send(embed=partnerembed)
 
+@client.command()
+async def csíkszereda(ctx):
+    partner1embed = discord.Embed(title = "Csíkszereda", description = "Egy magyar Discord-szerver mindenkinek! Akármilyen érdeklődési körrel is rendelkezz...", color = discord.Colour.green())
+    partner1embed.add_field(name = "Leírás:", value = "Mi is emeli ki a nagy tömegből? » Kedves, befogadó közösség   » Több mint 80 emoji   🔹1-es szintű Nitro Boost   » Sok jól konfigurált bot   » Aktívabb csatornák   » Partnerségi lehetőség   » Valamint segítőkész, kedves, könnyen elérhető vezetőség", inline = True)
+    await ctx.send(embed=partner1embed)
 
 
 @client.command()
