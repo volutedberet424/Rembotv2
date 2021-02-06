@@ -115,7 +115,7 @@ async def on_ready():
 async def on_guild_join(guild):
     for channel in guild.text_channels:
         if channel.permissions_for(guild.me).send_messages:
-            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! ```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok```')
+            await channel.send('A Rembot még bétában van tehát akadhatnak bugok, illetve meg kevés command van csak! ```Fontosabb dolgok hogy elkezd használni a botot: Prefix: r!, infó parancs: r!info, Parancslista: r!parancsok``` Support szerver: https://discord.gg/tCFesQjx')
         break
 
 
@@ -130,7 +130,7 @@ async def info(ctx):
     iembed.add_field(name = "Készitő:", value = "Volutedberet", inline = True)
     iembed.add_field(name = "Nyelv:", value = "python", inline = True)
     iembed.add_field(name = "Fontosabb infók:", value = "prefix: r!, parancslista: r!parancsok", inline = True)
-    iembed.add_field(name = "Support szerver", value = "[Invite](https://discord.gg/YDRRKQA)", inline = True)
+    iembed.add_field(name = "Support szerver", value = "[Invite](https://discord.gg/tCFesQjx)", inline = True)
     iembed.add_field(name = "Source code:", value = "[Github repo](https://github.com/volutedberet424/Rembotv2)", inline = True)
     iembed.add_field(name = "Invite a bothoz:", value = "[Invite](https://discord.com/api/oauth2/authorize?client_id=753645694799183963&permissions=8&scope=bot)", inline = True)
     iembed.set_thumbnail(url = "https://vignette.wikia.nocookie.net/rezero/images/0/02/Rem_Anime.png/revision/latest/window-crop/width/200/x-offset/281/y-offset/0/window-width/721/window-height/720?cb=20160730213532")
@@ -173,7 +173,7 @@ async def serverinfo(ctx):
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Ez a parancs nem létezik! ＾_＾"),
+        await ctx.send("Ez a parancs nem létezik! ＾_＾ Ha a parancs listázva van és mégsem jó, akkor szólj a tulajnak a support szerveren Invite: https://discord.gg/tCFesQjx"),
 
 @client.command()
 async def join(ctx):
