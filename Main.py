@@ -29,8 +29,8 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 
 pps = ["8D", "8=D", "8==D", "8===D", "8D", "8=D", "8==D", "8===D", "8====D", "8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D", "8========D", "8========D", "8=========D", "8==========D", "8===========D", "8=======================================================D" , "Úristen! Ez akkora hogy ki sem tudom írni..."]
 fights = ["leütötte", "(e)t leütötte", "kiütötte", "(e)t kiütötte", "megverte", "(e)t megverte"]
-queue = []
-m = {}
+uselesswebs = ["https://hooooooooo.com/", "http://eelslap.com/", "https://thatsthefinger.com/", "http://corndog.io/", "https://mondrianandme.com/", "http://burymewithmymoney.com/", "https://smashthewalls.com/", "https://trypap.com/", "http://www.republiquedesmangues.fr/", "https://jacksonpollock.org/", "https://cant-not-tweet-this.com/", "http://endless.horse/", "http://www.rrrgggbbb.com/", "http://www.staggeringbeauty.com/"]
+
 
 class TopGG(commands.Cog):
 
@@ -491,7 +491,7 @@ async def rankthot(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancslista", description = "A kategóriákat a parancsokkal érheted el! A bot prefixe: r! Jelenlegi parancsok száma: 52", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancslista", description = "A kategóriákat a parancsokkal érheted el! A bot prefixe: r! Jelenlegi parancsok száma: 53", color = discord.Colour.green())
     embed.add_field(name = "Teszt🧪", value = "```r!teszt```", inline = True)
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás🛂", value = "```r!moderator```", inline = True)
@@ -507,7 +507,7 @@ async def parancsok(ctx):
 @client.command()
 async def fun(ctx):
     funembed = discord.Embed(title = "Fun parancsok", description = "", color = discord.Colour.green())
-    funembed.add_field(name = "Jelenlegi parancsok száma: 9", value = "votegay, howsimp, rankthot, howgay, howcringe, howfat, pp, epikgamerrate, fight", inline = True)
+    funembed.add_field(name = "Jelenlegi parancsok száma: 10", value = "votegay, howsimp, rankthot, howgay, howcringe, howfat, pp, epikgamerrate, fight, uselessweb", inline = True)
     funembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=funembed)
 
@@ -556,12 +556,15 @@ async def anime(ctx):
 @client.command()
 async def alap(ctx):
     mainembed = discord.Embed(title = "Alap parancsok", description = "", color = discord.Colour.green())
-    mainembed.add_field(name = "Jelenlegi parancsok száma: 13", value = "partner, twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
+    mainembed.add_field(name = "Jelenlegi parancsok száma: 14", value = "partner, twitter, info, vote, uwu, owo, development, parancsok, invite, updateok, uptime, randomszám, avatar", inline = True)
     mainembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=mainembed)
 
 
-
+@client.command()
+async def uselessweb(ctx):
+    weboutput = random.choice(uselesswebs)
+    await ctx.send(weboutput) 
 
 @client.command()
 async def animeajánlás(ctx):
@@ -777,22 +780,6 @@ async def blush(ctx):
 
 
 ##ekonómia rendszer
-
-@client.command()
-async def munkák(ctx):
-    worksembed = discord.Embed(title = "Munkák listája", description = "Még bővülni fog!", color = discord.Colour.green())
-    worksembed.add_field(name = "Munkák:", value = "kiszolgáló", inline = True)
-    worksembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
-    await ctx.send(embed=worksembed)
-
-
-
-@client.command()
-async def work(ctx):
-    work1embed = discord.Embed(title = "OwO", description = "", color = discord.Colour.green())
-    work1embed.add_field(name = "Lol", value = "Te erre hogy találtál rá?", inline = True)
-    work1embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
-    await ctx.send(embed=work1embed)
 
 
 #client run function, token herokun belül van setupolva
