@@ -16,7 +16,7 @@ from random import randint
 from random import choice
 
 
-cogs = [levelsys]
+
 
 
 
@@ -30,10 +30,7 @@ animes = ["Re:ZERO Starting Life in Another World", "Darling in the Franxx", "Th
 pps = ["8D", "8=D", "8==D", "8===D", "8D", "8=D", "8==D", "8===D", "8====D", "8D", "8=D", "8==D", "8===D", "8====D", "8=====D", "8======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D",  "8=====D", "8======D", "8=======D", "8========D", "8========D", "8=========D", "8==========D", "8===========D", "8=======================================================D" , "Úristen! Ez akkora hogy ki sem tudom írni..."]
 fights = ["leütötte", "(e)t leütötte", "kiütötte", "(e)t kiütötte", "megverte", "(e)t megverte"]
 queue = []
-
-
-for i in range(len(cogs)):
-    print("a cogsok futnak")
+m = {}
 
 class TopGG(commands.Cog):
 
@@ -74,7 +71,6 @@ async def on_ready():
     print("###########################")
     client.loop.create_task(status_task())
 
-        
   
 @client.event
 async def on_guild_join(guild):
