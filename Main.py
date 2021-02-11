@@ -777,9 +777,11 @@ async def blush(ctx):
     await ctx.send(embed=blembed)
 
 
+@client.event
+async def on_message(message, ctx):
+    if message.content('Misi meleg'):
+        async ctx.send("az")
 
-
-##ekonómia rendszer
 
 
 #client run function, token herokun belül van setupolva
