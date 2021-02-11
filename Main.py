@@ -58,6 +58,10 @@ async def status_task():
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name="Szavazni az r!vote al lehet! │ r!info  "))
         await asyncio.sleep(10)
+        await client.change_presence(activity=discord.Game(name="r!partnerek hogy lásd a bot partnereit! │ r!info  "))
+        await asyncio.sleep(10)
+        await client.change_presence(activity=discord.Game(name="Re:Zero"), type = 3)
+        await asyncio.sleep(10)
         status_task()
         client.loop.create_task(status_task())
 
@@ -777,10 +781,7 @@ async def blush(ctx):
     await ctx.send(embed=blembed)
 
 
-@client.event
-async def on_message(message, ctx):
-    if message.content('Misi meleg'):
-        async ctx.send("az")
+
 
 
 
