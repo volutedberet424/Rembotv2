@@ -498,7 +498,7 @@ async def parancsok(ctx):
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás🛂", value = "```r!moderator```", inline = True)
     embed.add_field(name = "Fun😂", value = "```r!fun```", inline = True)
-    embed.add_field(name = "Képmanipulálás🖼️", value = "```r!képmanipulálás```", inline = True)
+    embed.add_field(name = "Képmanipulálás🖼️", value = "```r!képek```", inline = True)
     embed.add_field(name = "Anime🤷‍♀️", value = "```r!anime```", inline = True)
     embed.add_field(name = "Zene📀", value = "```r!zene```", inline = True)
     embed.add_field(name = "Roleplay👋", value = "```r!roleplay```", inline = True)
@@ -535,7 +535,7 @@ async def moderator(ctx):
     await ctx.send(embed=modembed)
 
 @client.command()
-async def képmanipulálás(ctx):
+async def képek(ctx):
     imgembed = discord.Embed(title = "képmanipulálós parancsok", description = "", color = discord.Colour.green())
     imgembed.add_field(name = "Jelenlegi parancsok száma: 5", value = "makerem, pofon, szemét, kézfogás, hornyjail", inline = True)
     imgembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
