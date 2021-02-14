@@ -378,6 +378,11 @@ async def rezeros2(ctx):
     re2embed.add_field(name = "ep11", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_S2_11_resz_Magyar_Felirattal)", inline = True)
     re2embed.add_field(name = "ep12", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_S2_12_resz_Magyar_Felirattal)", inline = True)
     re2embed.add_field(name = "ep13", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_S2_13_resz_Magyar_Felirattal)", inline = True)
+    re2embed.add_field(name = "ep14", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_14resz_Magyar_Felirattal)", inline = True)
+    re2embed.add_field(name = "ep15", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_15resz_Magyar_Felirattal_1)", inline = True)
+    re2embed.add_field(name = "ep16", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_16resz_Magyar_Felirattal)", inline = True)
+    re2embed.add_field(name = "ep17", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_17resz_Magyar_Felirattal)", inline = True)
+    re2embed.add_field(name = "ep18", value = "[Megtekintés](https://indavideo.hu/video/ReZero_kara_Hajimeru_Isekai_Seikatsu_2evad_18resz_Magyar_Felirattal)", inline = True)
 
     re2embed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     re2embed.set_thumbnail(url = "https://ih1.redbubble.net/image.1297475483.9873/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg")
@@ -388,7 +393,7 @@ async def rezeros2(ctx):
 @commands.cooldown(1, 10, commands.BucketType.user)
 @client.command()
 async def darling(ctx):
-    darembed = discord.Embed(title = "Darling in the franxx", description = "Sajnos nincs még második évad :(", color = discord.Colour.blue())
+    darembed = discord.Embed(title = "Darling in the franxx", description = "Nincs második évad", color = discord.Colour.blue())
     darembed.add_field(name = "ep1", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_01resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep2", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_02resz_Magyar_Felirat)", inline = True)
     darembed.add_field(name = "ep3", value = "[Megtekintés](http://indavideo.hu/video/Darling_in_the_FranXX_03resz_Magyar_Felirat)", inline = True)
@@ -469,6 +474,16 @@ async def howgay(ctx, user: discord.Member = None):
     gayembed.add_field(name = f"Melegség:", value = f"{user.mention} az {random.randint(0,100)}% ban meleg! 🏳️‍🌈", inline = True)
     gayembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=gayembed)
+
+@client.command()
+async def howwaifu(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+    
+    waifuembed = discord.Embed(title = "Waifuság mérő", description = "", color = discord.Colour.green())
+    waifuembed.add_field(name = f"Waifu %:", value = f"{user.mention} az {random.randint(0,100)}% ban waifu! <:rem:810372784281878528>", inline = True)
+    waifuembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=waifuembed)    
 
 @client.command()
 async def howcringe(ctx, user: discord.Member = None):
