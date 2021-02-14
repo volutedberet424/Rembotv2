@@ -108,7 +108,7 @@ async def info(ctx):
     iembed.add_field(name = "Készitő:", value = "Volutedberet", inline = True)
     iembed.add_field(name = "Nyelv:", value = "python", inline = True)
     iembed.add_field(name = "Fontosabb infók:", value = "prefix: r!, parancslista: r!parancsok", inline = True)
-    iembed.add_field(name = "Support szerver", value = "[Invite](https://discord.gg/tCFesQjx)", inline = True)
+    iembed.add_field(name = "Support szerver", value = "[Invite](https://discord.gg/YUSVSc8u7b)", inline = True)
     iembed.add_field(name = "Source code:", value = "[Github repo](https://github.com/volutedberet424/Rembotv2)", inline = True)
     iembed.add_field(name = "Invite a bothoz:", value = "[Invite](https://discord.com/api/oauth2/authorize?client_id=753645694799183963&permissions=8&scope=bot)", inline = True)
     iembed.set_thumbnail(url = "https://vignette.wikia.nocookie.net/rezero/images/0/02/Rem_Anime.png/revision/latest/window-crop/width/200/x-offset/281/y-offset/0/window-width/721/window-height/720?cb=20160730213532")
@@ -151,7 +151,7 @@ async def serverinfo(ctx):
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Ez a parancs nem létezik! ＾_＾ Ha a parancs listázva van és mégsem jó, akkor szólj a tulajnak a support szerveren Invite: https://discord.gg/tCFesQjx"),
+        await ctx.send("Ez a parancs nem létezik! ＾_＾ Ha a parancs listázva van és mégsem jó, akkor jelentsd ezt a hibát a support szerveren Invite: https://discord.gg/YUSVSc8u7b"),
     if isinstance(error, commands.CommandOnCooldown):
         await ctx.send("Várj egy kicsit mielött ezt a parancsot használnád megint!")
 @client.command()
