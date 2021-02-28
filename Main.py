@@ -799,4 +799,6 @@ async def blush(ctx):
 
 
 #client run function, token herokun belül van setupolva
-client.run(os.environ['token'])
+#client.run(os.environ['token'])
+client.run('NzUzNjQ1Njk0Nzk5MTgzOTYz.X1pNPw.sN_QcB0VynjICYG2Gp4v7-48fxw')
+
