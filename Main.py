@@ -86,6 +86,7 @@ async def on_guild_join(guild):
 async def partnerek(ctx):
     partnerembed = discord.Embed(title = "Szerverek akik hírdetik a botot", description = "A teljes leíráshor is invitehoz használd az adott szerver nevét parancsként!", color = discord.Colour.green())
     partnerembed.add_field(name = "csíkszereda", value = "Egy magyar Discord-szerver mindenkinek! Akármilyen érdeklődési körrel is rendelkezz...", inline = True)
+    partnerembed.add_field(name = "renobot", value = "Reno Bot is a perfect english bot for you!, With moderation commands and fun commands, you are sure to enjoy it!", inline = True)
     await ctx.send(embed=partnerembed)
 
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -96,6 +97,14 @@ async def csíkszereda(ctx):
     partner1embed.add_field(name = "Invite:", value = "https://discord.gg/e9B5fSWb2E", inline = True)
     partner1embed.set_thumbnail(url = "https://cdn.discordapp.com/icons/611266581435252746/8807efff8b233b9d5da7cf7f3798f81a.webp?size=1024")
     await ctx.send(embed=partner1embed)
+
+@commands.cooldown(1, 10, commands.BucketType.user)
+@client.command()
+async def renobot(ctx):
+    partner2embed = discord.Embed(title = "Reno bot", description = "Reno Bot is a perfect english bot for you!, With moderation commands and fun commands, you are sure to enjoy it!", color = discord.Colour.green())
+    partner2embed.add_field(name = "Invite:", value = "https://dsc.gg/reno-bot", inline = True)
+    partner2embed.set_thumbnail(url = "https://cdn.discordapp.com/avatars/803391662663532545/608bb95b8d16ed11278d019e51c6541d.png?size=256")
+    await ctx.send(embed=partner2embed)
 
 
 @client.command()
