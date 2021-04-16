@@ -494,6 +494,10 @@ async def howwaifu(ctx, user: discord.Member = None):
     waifuembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=waifuembed)    
 
+
+##Misi meleg
+
+
 @client.command()
 async def howcringe(ctx, user: discord.Member = None):
     if user == None:
