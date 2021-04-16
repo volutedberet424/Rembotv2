@@ -104,6 +104,7 @@ async def updateok(ctx):
 async def info(ctx):
     iembed = discord.Embed(title = "Rembot információk", description = "Egy anime témájú bot, mely sok-sok dolgot tartalmaz. Többek között képmanipulálás, beépített moderálás és ezek mellett még sok más...", color = discord.Colour.blue())
     iembed.add_field(name = "Készítő:", value = "Volutedberet", inline = True)
+    iembed.add_field(name = "Helyesírás javitó:", value = "Ferko", inline = True)
     iembed.add_field(name = "Programozási nyelv:", value = "Python", inline = True)
     iembed.add_field(name = "Fontosabb információk:", value = "prefix: r!; r!parancsok", inline = True)
     iembed.add_field(name = "Supportszerver", value = "[Invite](https://discord.gg/tCFesQjx)", inline = True)
