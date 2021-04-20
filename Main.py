@@ -464,8 +464,8 @@ async def howdrippy(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
       
-    gamembed = discord.Embed(title = "Mennyire vagy **Dippes?**", description = "", color = discord.Colour.green())
-    gamembed.add_field(name = "**Drip** mérő:", value = f"{user.mention} {random.randint(0,100)}%-ban Drippes. 🥶🥶🥶" , inline = True)
+    gamembed = discord.Embed(title = "Mennyire vagy **Drippes?**", description = "", color = discord.Colour.green())
+    gamembed.add_field(name = "**Dripp** mérő:", value = f"{user.mention} {random.randint(0,100)}%-ban Drippes. 🥶🥶🥶" , inline = True)
     gamembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=gamembed)    
 
