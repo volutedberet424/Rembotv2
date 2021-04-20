@@ -460,6 +460,16 @@ async def epikgamerrate(ctx, user: discord.Member = None):
     await ctx.send(embed=gamembed)
 
 @client.command()
+async def howdrippy(ctx, user: discord.Member = None):
+    if user == None:
+        user = ctx.author
+      
+    gamembed = discord.Embed(title = "Mennyire vagy **Dippes?**", description = "", color = discord.Colour.green())
+    gamembed.add_field(name = "**Drip** mérő:", value = f"{user.mention} {random.randint(0,100)}%-ban Drippes. 🥶🥶🥶" , inline = True)
+    gamembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
+    await ctx.send(embed=gamembed)    
+
+@client.command()
 async def howgay(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
@@ -492,7 +502,7 @@ async def rankthot(ctx, user: discord.Member = None):
 
 @client.command()
 async def parancsok(ctx):
-    embed = discord.Embed(title = "Parancslista", description = "A kategóriák elérési útjait itt olvashatod le. Parancsok száma: 53", color = discord.Colour.green())
+    embed = discord.Embed(title = "Parancslista", description = "A kategóriák elérési útjait itt olvashatod le. Parancsok száma: 54", color = discord.Colour.green())
     embed.add_field(name = "Teszt 🧪", value = "```r!teszt```", inline = True)
     embed.add_field(name = "Alap", value = "```r!alap```", inline = True)
     embed.add_field(name = "Moderálás 🛂", value = "```r!moderator```", inline = True)
@@ -508,7 +518,7 @@ async def parancsok(ctx):
 @client.command()
 async def fun(ctx):
     funembed = discord.Embed(title = "Fun", description = "", color = discord.Colour.green())
-    funembed.add_field(name = "Parancsok száma: 10", value = "votegay, howsimp, rankthot, howgay, howcringe, howfat, pp, epikgamerrate, fight, uselessweb", inline = True)
+    funembed.add_field(name = "Parancsok száma: 11", value = "votegay, howdrippy, howsimp, rankthot, howgay, howcringe, howfat, pp, epikgamerrate, fight, uselessweb", inline = True)
     funembed.set_footer(icon_url = "https://cdn.discordapp.com/avatars/753645694799183963/bb546ed943c00348a3b43039efb6c138.webp?size=1024", text = "@Rembot")
     await ctx.send(embed=funembed)
 
